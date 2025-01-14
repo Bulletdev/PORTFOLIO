@@ -79,7 +79,7 @@ const projectLists: {
       content: (
       <a target="_blank" href="https://github.com/bulletdev/pipeline-automatizador">
         <Image
-          src="/pipeline.jpeg"
+          src="/pipeline.png"
           alt="Demo"
           loading="lazy"
           width={700} 
