@@ -118,9 +118,8 @@ function PersonalStatement() {
       </div>
       <h4 className="text-md max-md:text-sm text-spotify-light-gray font-semibold">
         Sou um desenvolvedor <span className="text-spotify-white"> autodidata</span>{" "}
-        estudando <span className="text-spotify-white"> Analise e desenvolvimento de sistemas💻</span>{" "}
-        na
-        <span className="text-spotify-white"> UNIFAN </span>
+          que está constantemente,  <span className="text-spotify-white"> compartilhando, colaborando e inovando💻</span>{" "}
+        <span className="text-spotify-white">  </span>
         . apaixonado por{" "}
         <span className="text-spotify-white">Backend e</span> &{" "}
         <span className="text-spotify-white">APPS Cloud native</span>

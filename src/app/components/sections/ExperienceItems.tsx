@@ -85,7 +85,7 @@ const experienceLists: experienceListsProps[] = [
   {
     imageSrc: "/asu.svg",
     companyName: "Rede Materdei de Saúde - Hospital EMEC",
-    positionTitle: "Infraestrutura de tecnologia da informação",
+    positionTitle: "Sysadmin & DevOps",
     date: "Fevereiro de 2022 – Julho de 2023",
   },
   {

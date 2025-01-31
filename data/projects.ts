@@ -29,5 +29,23 @@ export const personalProjects: personalProjectType = [
       "Portfolio com design baseado no Spotify",
     tech: ["Typescript", "NextJS", "Tailwind"],
   },
+  {
+    href: "https://github.com/bulletdev/pipeline-automatizador",
+    imageSrc: "/cicd.png",
+    imageAlt: "Automatizador de pipeline",
+    title: "Automatizador de Pipeline CI-CD ♺",
+    description:
+        "Autoamatizador de pipeline CI-CD",
+    tech: ["Java", "JavaFX", "Docker", "Shell", "Jenkins"],
+  },
+  {
+    href: "https://github.com/bulletdev/sql-query-builder",
+    imageSrc: "/sql.jpg",
+    imageAlt: "SQL Query Builder",
+    title: "SQL Query Builder 🛢️",
+    description:
+        "Automatizador de Queries Multi-Database",
+    tech: ["Python", "GO", "SQL", "Shell", ],
+  },
   // Add more project objects here...
 ];
