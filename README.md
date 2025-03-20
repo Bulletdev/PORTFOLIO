@@ -6,6 +6,7 @@
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/bulletdev/PORTFOLIO/commits/main)
 [![LinkedIn](https://img.shields.io/badge/connect-linkedin-1abc9c.svg)](https://www.linkedin.com/in/michael-bullet/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![CodeQL Advanced](https://github.com/Bulletdev/PORTFOLIO/actions/workflows/codeql.yml/badge.svg)](https://github.com/Bulletdev/PORTFOLIO/actions/workflows/codeql.yml)
 
 A modern, responsive portfolio website built with cutting-edge technologies, featuring a Spotify-inspired design.
 
