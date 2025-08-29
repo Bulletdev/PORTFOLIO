@@ -75,7 +75,12 @@ type experienceListsProps = {
 };
 
 const experienceLists: experienceListsProps[] = [
-  
+    {
+    imageSrc: "/ESR.svg",
+    companyName: "Effecti",
+    positionTitle: "Desenvolvedor Full Stack",
+    date: "Janeiro de 2025 - Agosto de 2025",
+  },
   {
     imageSrc: "/ESR.svg",
     companyName: "Atento Brasil",
@@ -103,7 +108,7 @@ const experienceLists: experienceListsProps[] = [
   {
     imageSrc: "/asu.svg",
     companyName: "Pirelli Pneus",
-    positionTitle: "Desenvolvedor Java Junior",
+    positionTitle: "Desenvolvedor Junior",
     date: "Outubro 2017 – Outubro 2018",
   },
   {
