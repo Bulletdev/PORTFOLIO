@@ -7,6 +7,22 @@ html {
 }
 
 @layer utilities {
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
   /* Define background colors */
   .bg-spotify-green {
     @apply bg-[#1DB954];
@@ -86,6 +102,10 @@ html {
   }
 
   .text-spotify-light-gray {
+    @apply text-[#B3B3B3];
+  }
+
+  .text-spotify-grey {
     @apply text-[#B3B3B3];
   }
 

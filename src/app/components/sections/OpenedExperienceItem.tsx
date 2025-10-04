@@ -27,10 +27,10 @@ export default function OpenedExperienceItem({
       <div className="sticky top-0 bg-spotify-light-dark z-10">
         <div className="flex justify-between items-center p-6 pb-4">
           <div className="flex flex-col gap-1.5">
-            <h2 className="text-2xl font-bold">Projects</h2>
+            <h2 className="text-2xl font-bold">Projetos</h2>
             <p className="flex items-center text-spotify-grey text-sm gap-1.5">
               <CiGlobe className="text-xl text-spotify-white" />
-              {personalProjects.length} completed projects • Atualizado 31 de Janeiro de 2025
+              {personalProjects.length} projetos concluídos • Atualizado em Outubro de 2024
             </p>
           </div>
 
