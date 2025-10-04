@@ -9,7 +9,7 @@ export default function Skills() {
       id="skills"
     >
       <h1 className="text-2xl font-semibold pl-5 pt-3">Skills</h1>
-      <InfiniteMovingCards items={skillItems} speed="slow" className="" />
+      <InfiniteMovingCards items={skillItems} speed="fast" className="" />
     </div>
   );
 }

@@ -10,10 +10,10 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function ProfileCard() {
   return (
     <div
-      className="relative col-span-2 row-span-6 bg-spotify-light-dark rounded-xl p-6 max-md:p-6"
+      className="relative col-span-2 row-span-6 bg-spotify-light-dark rounded-xl p-3 max-md:p-3"
       id="#profile"
     >
-      <div className="flex flex-col gap-7 max-md:gap-5">
+      <div className="flex flex-col gap-4 max-md:gap-3">
         <BackgroundGradient containerClassName="rounded-[40px] place-self-center">
           <Image
             src="/Michael.jpeg"
@@ -53,7 +53,7 @@ function Booking() {
     navigator.clipboard
       .writeText(email)
       .then(() => {
-        alert("Email copied to clipboard!");
+        alert("E-mail copiado para a área de transferência!");
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
@@ -64,42 +64,38 @@ function Booking() {
     navigator.clipboard
       .writeText(phoneNum)
       .then(() => {
-        alert("Phone bumber copied to clipboard!");
+        alert("Número copiado para a área de transferência!");
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
       });
   };
-  const handleCopyWhatsapp = () => {
-    navigator.clipboard
-      .writeText(phoneNum)
-      .then(() => {
-        alert("Phone bumber copied to clipboard!");
-      })
-      .catch((err) => {
-        console.error("Failed to copy: ", err);
-      });
+  const handleOpenWhatsapp = () => {
+    window.open(`https://${Whatsapp}`, '_blank');
   };
   return (
     <div className="flex px-4 gap-3">
        <button
         type="button"
         className="flex items-center justify-center text-sm font-bold bg-spotify-green hover:bg-spotify-dark-green hover:scale-105  px-4 py-2.5 rounded-full gap-2 transition-all duration-200"
-        onClick={handleCopyWhatsapp}
+        onClick={handleOpenWhatsapp}
+        title="Abrir WhatsApp"
       >
-        <FaWhatsapp /> 
+        <FaWhatsapp />
       </button>
       <button
         type="button"
         className="flex items-center justify-center text-sm font-bold bg-spotify-green hover:bg-spotify-dark-green hover:scale-105  px-4 py-2.5 rounded-full gap-2 transition-all duration-200"
         onClick={handleCopyNumber}
+        title="Copiar número"
       >
-        <FaRegCopy /> copiar número
+        <FaRegCopy /> Copiar Número
       </button>
       <button
         type="button"
         className="flex items-center justify-center text-sm font-bold border border-[#727272] hover:border-white hover:scale-105 text-white px-4 py-2.5 rounded-full gap-2 transition-all duration-200"
         onClick={handleCopyEmail}
+        title="Copiar e-mail"
       >
         <FaRegCopy /> Copiar E-mail
       </button>
@@ -111,18 +107,18 @@ function PersonalStatement() {
   return (
     <div className="flex flex-col gap-3 px-4">
       <div className="space-y-1.5">
-        <h1 className="text-2xl font-semibold">Michael  Douglas</h1>
+        <h1 className="text-2xl font-semibold">Michael Douglas</h1>
         <p className="text-spotify-gray text-sm">
-          Desenvolvedor Backend • Infraestrutura • Cloud • DevOps
+          Desenvolvedor Backend • Java • Golang • Ruby on Rails
         </p>
       </div>
       <h4 className="text-md max-md:text-sm text-spotify-light-gray font-semibold">
-        Sou um desenvolvedor <span className="text-spotify-white"> autodidata</span>{" "}
-          que está constantemente,  <span className="text-spotify-white"> compartilhando, colaborando e inovando💻</span>{" "}
-        <span className="text-spotify-white">  </span>
-        . apaixonado por{" "}
-        <span className="text-spotify-white">Backend e</span> &{" "}
-        <span className="text-spotify-white">APPS Cloud native</span>
+        Desenvolvedor <span className="text-spotify-white">autodidata</span> com foco em{" "}
+        <span className="text-spotify-white">backend</span> e{" "}
+        <span className="text-spotify-white">aplicações cloud-native</span>.
+        Apaixonado por{" "}
+        <span className="text-spotify-white">compartilhar conhecimento, colaborar em projetos</span> e{" "}
+        <span className="text-spotify-white">inovar</span> através da tecnologia.
       </h4>
     </div>
   );
