@@ -9,43 +9,40 @@ export type personalProjectType = {
 }[];
 
 export const personalProjects: personalProjectType = [
-  
-  
   {
     href: "https://github.com/bulletdev/bullet-cloud-api",
     imageSrc: "/staticsitegenerator_infrastructure.png",
-    imageAlt: "API",
-    title: "Bullet API ♺",
+    imageAlt: "Bullet Cloud API",
+    title: "Bullet Cloud API ♺",
     description:
-      "API para gerenciamento de produtos",
-    tech: ["Golang", "GO", "API REST"],
+      "API RESTful escalável para gerenciamento de produtos desenvolvida em Golang, com foco em performance e arquitetura cloud-native",
+    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
   },
   {
     href: "https://github.com/bulletdev/portfolio",
     imageSrc: "/measf.jpeg",
-    imageAlt: "Portfolio",
-    title: "Meu portfolio ♺",
+    imageAlt: "Portfolio Pessoal",
+    title: "Portfolio Pessoal ♺",
     description:
-      "Portfolio com design baseado no Spotify",
-    tech: ["Typescript", "NextJS", "Tailwind"],
+      "Portfolio responsivo e moderno com design inspirado no Spotify, construído com Next.js 14 e Tailwind CSS",
+    tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
   },
   {
     href: "https://github.com/bulletdev/pipeline-automatizador",
     imageSrc: "/cicd.png",
-    imageAlt: "Automatizador de pipeline",
-    title: "Automatizador de Pipeline CI-CD ♺",
+    imageAlt: "Automatizador de Pipeline CI/CD",
+    title: "Automatizador de Pipeline CI/CD ♺",
     description:
-        "Autoamatizador de pipeline CI-CD",
-    tech: ["Java", "JavaFX", "Docker", "Shell", "Jenkins"],
+      "Ferramenta desktop para automação de pipelines CI/CD com interface gráfica intuitiva, integração com Jenkins e suporte a containers Docker",
+    tech: ["Java", "JavaFX", "Docker", "Shell Script", "Jenkins"],
   },
   {
     href: "https://github.com/bulletdev/sql-query-builder",
     imageSrc: "/sql.jpg",
-    imageAlt: "SQL Query Builder",
+    imageAlt: "SQL Query Builder Multi-Database",
     title: "SQL Query Builder 🛢️",
     description:
-        "Automatizador de Queries Multi-Database",
-    tech: ["Python", "GO", "SQL", "Shell", ],
+      "Gerador automático de queries SQL com suporte multi-database (MySQL, PostgreSQL, Oracle), reduzindo tempo de desenvolvimento em 70%",
+    tech: ["Python", "Golang", "SQL", "Shell Script"],
   },
-  // Add more project objects here...
 ];

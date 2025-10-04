@@ -5,6 +5,7 @@ import { ProjectsProps } from "../../page";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { GrLinkNext } from "react-icons/gr";
 import { FaArrowDown } from "react-icons/fa6";
+import { title } from "process";
 
 export default function Projects({ onSetExperienceSection }: ProjectsProps) {
   return (
@@ -41,14 +42,14 @@ const projectLists: {
   content?: React.ReactNode | any;
 }[] = [
   {
-    title: "API Rest Golang",
+    title: "API REST Golang",
     description:
-      "API para gerenciamento de produtos , Uma API RESTful é uma interface de programação de aplicativos (API) que permite a troca de informações de forma segura entre dois sistemas de computador, permite a integração de aplicações e a conexão de componentes em arquiteturas de microsserviços. ",
+      "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang. Permite integração de aplicações e conexão de componentes em arquiteturas de microsserviços, garantindo comunicação segura e eficiente entre sistemas.",
     content: (
-      <a target="_blank" href="https://github.com/Bulletdev/bullet-cloud-api">
+      <a target="_blank" href="https://github.com/Bulletdev/go-cart-api">
         <Image
           src="/api.png"
-          alt="Requisições aqui: https://bullet-cloud-api.onrender.com"
+          alt="API REST Golang para gerenciamento de produtos"
           width={500}
           height={500}
         />
@@ -56,14 +57,62 @@ const projectLists: {
     ),
   },
   {
+    title: "clube do java E-commerce",
+    description:
+      "Clube do Java E-commerce. Inclui desenvolvimento front-end com vue.js e back-end com Java, além de integração com sistemas de API de pagamento, correios, chatbot e otimização para SEO.",
+    content: (
+      <a target="_blank" href="https://clubedojava.com.br/">
+        <Image
+          src="/cdj.jpg"
+          alt="Clube do Java E-commerce"
+          loading="lazy"
+          width={700}
+          height={300}
+        />
+      </a>
+    ),
+  },
+  {
+    title: "Fabmed Distribuidora",
+    description:
+      "Rebranding visual da Fabmed Distribuidora, com foco em usabilidade e design moderno. Inclui desenvolvimento front-end com React.js e back-end com Node.js, além de integração com sistemas de Intranet, chatbot e otimização para SEO.",
+    content: (
+      <a target="_blank" href="https://fabmed.vercel.app/">
+        <Image
+          src="/fbm.jpg"
+          alt="Fabmed Distribuidora"
+          loading="lazy"
+          width={700}
+          height={300}
+        />
+      </a>
+    ),
+  },
+  {
+    title: "Portfolio Pessoal",
+    description:
+      "Portfolio responsivo e moderno com design inspirado no Spotify, construído com Next.js 14 e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma elegante, destacando-se pela usabilidade e estética visual.",
+    content: (
+      <a target="_blank" href="https://github.com/bulletdev/portfolio">
+        <Image
+          src="/measf.jpeg"
+          alt="Portfolio Pessoal"
+          loading="lazy"
+          width={700}
+          height={300}
+        />
+      </a>
+    ),
+  },
+  {
     title: "📐 Cálculo para Devs",
     description:
-      "Cálculo para Desenvolvedores! Aqui, você encontrará exemplos de código práticos e organizados por módulos para aprender e aplicar conceitos fundamentais de cálculo diretamente na programação. Este curso é ideal para desenvolvedores com conhecimento básico de programação e matemática (álgebra e geometria).",
+      "Plataforma educacional com exemplos práticos de código organizados por módulos, ensinando conceitos fundamentais de cálculo aplicados à programação. Ideal para desenvolvedores que desejam dominar matemática aplicada ao desenvolvimento de software.",
     content: (
       <a target="_blank" href="https://github.com/ClubeDoJava/CalculoParaDevs">
         <Image
           src="/calculo.png"
-          alt="demo"
+          alt="Cálculo para Desenvolvedores"
           loading="lazy"
           width={700}
           height={300}
@@ -75,14 +124,14 @@ const projectLists: {
   {
     title: "Automatizador de Pipeline",
     description:
-      "Crie pipelines CI/CD de forma intuitiva sem precisar configurar manualmente",
+      "Ferramenta desktop com interface intuitiva para criação automatizada de pipelines CI/CD. Elimina a necessidade de configuração manual complexa, integrando-se com Jenkins e Docker para deploy simplificado.",
       content: (
       <a target="_blank" href="https://github.com/bulletdev/pipeline-automatizador">
         <Image
           src="/pipeline.png"
-          alt="Demo"
+          alt="Automatizador de Pipeline CI/CD"
           loading="lazy"
-          width={700} 
+          width={700}
           height={300}
         />
       </a>
@@ -92,12 +141,12 @@ const projectLists: {
   {
     title: "DevInterviewSimulator",
     description:
-      "O DevInterviewSimulator é uma ferramenta interativa que permite aos desenvolvedores se prepararem para entrevistas técnicas com base nas tecnologias e frameworks que eles dominam. O sistema gera perguntas dinâmicas e simula uma entrevista real.",
+      "Ferramenta interativa para preparação de entrevistas técnicas personalizadas. Gera perguntas dinâmicas baseadas nas tecnologias e frameworks do desenvolvedor, simulando entrevistas reais e acelerando o processo de preparação.",
       content: (
       <a target="_blank" href="https://github.com/ClubeDoJava/DevInterviewSimulator">
         <Image
           src="/simulador.png"
-          alt="Demo"
+          alt="Simulador de Entrevistas para Desenvolvedores"
           loading="lazy"
           width={700}
           height={300}
@@ -110,12 +159,12 @@ const projectLists: {
   {
     title: "ShortMe",
     description:
-      "O ShortMe é uma plataforma online que permite criar uma página personalizada com vários links para diferentes conteúdos: Redes sociais, Sites, Lojas, Vídeos, Música, Podcasts.  é útil para pessoas e empresas que possuem várias plataformas e desejam compartilhar todas elas de forma organizada.",
+      "Plataforma de bio link que centraliza múltiplos links em uma única página personalizada. Ideal para criadores de conteúdo e empresas que precisam compartilhar redes sociais, sites, lojas e mídias de forma organizada e profissional.",
       content: (
       <a target="_blank" href="https://github.com/Bulletdev/ShortMe">
         <Image
           src="/shortm.png"
-          alt="Demo"
+          alt="ShortMe - Plataforma de Bio Links"
           loading="lazy"
           width={800}
           height={500}
