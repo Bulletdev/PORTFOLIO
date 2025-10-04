@@ -40,11 +40,13 @@ const projectLists: {
   title: string;
   description: string;
   content?: React.ReactNode | any;
+  tech?: string[];
 }[] = [
   {
     title: "API REST Golang",
     description:
       "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang. Permite integração de aplicações e conexão de componentes em arquiteturas de microsserviços, garantindo comunicação segura e eficiente entre sistemas.",
+    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
     content: (
       <a target="_blank" href="https://github.com/Bulletdev/go-cart-api">
         <Image
@@ -60,6 +62,7 @@ const projectLists: {
     title: "clube do java E-commerce",
     description:
       "Clube do Java E-commerce. Inclui desenvolvimento front-end com vue.js e back-end com Java, além de integração com sistemas de API de pagamento, correios, chatbot e otimização para SEO.",
+    tech: ["Vue.js", "Java", "API Pagamento", "SEO", "Chatbot"],
     content: (
       <a target="_blank" href="https://clubedojava.com.br/">
         <Image
@@ -76,6 +79,7 @@ const projectLists: {
     title: "Fabmed Distribuidora",
     description:
       "Rebranding visual da Fabmed Distribuidora, com foco em usabilidade e design moderno. Inclui desenvolvimento front-end com React.js e back-end com Node.js, além de integração com sistemas de Intranet, chatbot e otimização para SEO.",
+    tech: ["React.js", "Node.js", "Intranet", "Chatbot", "SEO"],
     content: (
       <a target="_blank" href="https://fabmed.vercel.app/">
         <Image
@@ -92,6 +96,7 @@ const projectLists: {
     title: "Portfolio Pessoal",
     description:
       "Portfolio responsivo e moderno com design inspirado no Spotify, construído com Next.js 14 e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma elegante, destacando-se pela usabilidade e estética visual.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     content: (
       <a target="_blank" href="https://github.com/bulletdev/portfolio">
         <Image
@@ -108,6 +113,7 @@ const projectLists: {
     title: "📐 Cálculo para Devs",
     description:
       "Plataforma educacional com exemplos práticos de código organizados por módulos, ensinando conceitos fundamentais de cálculo aplicados à programação. Ideal para desenvolvedores que desejam dominar matemática aplicada ao desenvolvimento de software.",
+    tech: ["Python", "JavaScript", "Markdown", "Git"],
     content: (
       <a target="_blank" href="https://github.com/ClubeDoJava/CalculoParaDevs">
         <Image
@@ -125,7 +131,8 @@ const projectLists: {
     title: "Automatizador de Pipeline",
     description:
       "Ferramenta desktop com interface intuitiva para criação automatizada de pipelines CI/CD. Elimina a necessidade de configuração manual complexa, integrando-se com Jenkins e Docker para deploy simplificado.",
-      content: (
+    tech: ["Java", "JavaFX", "Docker", "Jenkins", "Shell Script"],
+    content: (
       <a target="_blank" href="https://github.com/bulletdev/pipeline-automatizador">
         <Image
           src="/pipeline.png"
@@ -142,7 +149,8 @@ const projectLists: {
     title: "DevInterviewSimulator",
     description:
       "Ferramenta interativa para preparação de entrevistas técnicas personalizadas. Gera perguntas dinâmicas baseadas nas tecnologias e frameworks do desenvolvedor, simulando entrevistas reais e acelerando o processo de preparação.",
-      content: (
+    tech: ["Python", "AI", "FastAPI", "React"],
+    content: (
       <a target="_blank" href="https://github.com/ClubeDoJava/DevInterviewSimulator">
         <Image
           src="/simulador.png"
@@ -160,7 +168,8 @@ const projectLists: {
     title: "ShortMe",
     description:
       "Plataforma de bio link que centraliza múltiplos links em uma única página personalizada. Ideal para criadores de conteúdo e empresas que precisam compartilhar redes sociais, sites, lojas e mídias de forma organizada e profissional.",
-      content: (
+    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    content: (
       <a target="_blank" href="https://github.com/Bulletdev/ShortMe">
         <Image
           src="/shortm.png"
@@ -171,9 +180,5 @@ const projectLists: {
         />
       </a>
     ),
-  },
-  {
-    title: "",
-    description: ""
   },
 ];

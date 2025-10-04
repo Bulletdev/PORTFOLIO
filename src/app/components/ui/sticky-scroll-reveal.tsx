@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export const StickyScroll = ({
   content,
@@ -12,10 +13,12 @@ export const StickyScroll = ({
     title: string;
     description: string;
     content?: React.ReactNode | any;
+    tech?: string[];
   }[];
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
@@ -55,6 +58,16 @@ export const StickyScroll = ({
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
   }, [activeCard]);
 
+  const toggleExpand = (index: number) => {
+    const newExpanded = new Set(expandedCards);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedCards(newExpanded);
+  };
+
   return (
     <motion.div
       animate={{
@@ -90,19 +103,61 @@ export const StickyScroll = ({
               >
                 {item.description}
               </motion.p>
+
+              {/* Botão Ver Detalhes */}
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                onClick={() => toggleExpand(index)}
+                className="mt-4 flex items-center gap-2 text-sm font-semibold text-spotify-green hover:text-white transition-colors"
+              >
+                {expandedCards.has(index) ? (
+                  <>
+                    Ocultar Detalhes <FaChevronUp className="text-xs" />
+                  </>
+                ) : (
+                  <>
+                    Ver Detalhes <FaChevronDown className="text-xs" />
+                  </>
+                )}
+              </motion.button>
+
+              {/* Detalhes expandidos */}
+              {expandedCards.has(index) && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="mt-4 space-y-4"
+                >
+                  {/* Tecnologias */}
+                  {item.tech && (
+                    <div className="flex gap-2 flex-wrap">
+                      {item.tech.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="text-xs bg-spotify-green text-spotify-black px-3 py-1 rounded-full font-semibold"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Miniatura */}
+                  {item.content && (
+                    <div className="rounded-lg overflow-hidden">
+                      {item.content}
+                    </div>
+                  )}
+                </motion.div>
+              )}
             </div>
           ))}
           <div className="h-40" />
         </div>
-      </div>
-      <div
-        style={{ background: backgroundGradient }}
-        className={cn(
-          "hidden lg:block h-fit rounded-xl bg-white sticky top-14",
-          contentClassName
-        )}
-      >
-        {content[activeCard].content ?? null}
       </div>
     </motion.div>
   );
