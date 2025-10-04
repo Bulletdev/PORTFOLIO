@@ -145,31 +145,38 @@ const experienceLists: experienceListsProps[] = [
     description: [
       "Desenvolvimento de aplicações web utilizando Vue.js, php como cache, Java e Ruby on Rails",
       "Implementação de APIs RESTful e integração com bancos de dados",
+      "Otimização de performance e escalabilidade de sistemas",
+      "Participação em code reviews e melhoria contínua de processos",
+      "Mentoria de desenvolvedores juniores",
       "Colaboração em projetos ágeis com metodologia Scrum"
     ]
   },
   {
     imageSrc: "/pinear-logo.svg",
     companyName: "Accenture",
-    positionTitle: "Desenvolvedor Java Pleno",
+    positionTitle: "Desenvolvedor Backend Pleno",
     date: "Março de 2020 - Março de 2022",
     description: [
       "Desenvolvimento de microserviços com Spring Boot",
       "Integração com APIs de terceiros e sistemas legados Ruby on Rails",
       "Testes unitários e de integração com JUnit e Mockito",
+      "Participação em reuniões de planejamento e refinamento de sprints",
+      "Colaboração com equipes multidisciplinares",
       "Code review e mentoria de desenvolvedores júnior"
     ]
   },
   {
     imageSrc: "/asu.svg",
     companyName: "Accenture",
-    positionTitle: "Desenvolvedor Java Júnior",
+    positionTitle: "Desenvolvedor Backend Júnior",
     date: "Fevereiro de 2019 - Março de 2020",
     description: [
       "Desenvolvimento de funcionalidades em sistemas enterprise",
       "Manutenção e correção de bugs em aplicações Java",
       "Participação em dailies e retrospectivas",
+      "Colaboração com equipes de desenvolvimento ágil",
       "Aprendizado de boas práticas de programação"
+
     ]
   },
   {
