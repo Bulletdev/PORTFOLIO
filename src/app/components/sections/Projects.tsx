@@ -13,7 +13,7 @@ export default function Projects({ onSetExperienceSection }: ProjectsProps) {
       className="max-md:hidden max-lg:col-span-1 max-lg:row-span-1 col-span-2 row-span-6 col-start-5 bg-spotify-light-dark rounded-xl overflow-hidden"
       id="projects"
     >
-      <div className="p-4">
+      <div className="p-3">
         <div className="flex gap-3 justify-center">
           {/* Primary Button (Green) */}
           <button className="flex items-center justify-center text-sm font-bold bg-spotify-green hover:bg-spotify-dark-green hover:scale-105  px-4 py-2.5 rounded-full gap-2 transition-all duration-200">
