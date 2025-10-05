@@ -46,7 +46,7 @@ export default function ExperienceItem() {
         </p>
       </div>
 
-      <div className="px-4 py-3">
+      <div className="px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -95,7 +95,7 @@ type PositionsProps = {
 
 function Positions({ positions, isPlaying }: PositionsProps) {
   return (
-    <div className="px-4 pb-4 md:overflow-y-auto h-[300px]">
+    <div className="px-4 pb-2 md:overflow-y-auto h-[300px]">
       {positions.map((position: experienceListsProps, index) => (
         <div
           className="flex items-center gap-4 p-2.5 hover:bg-[#282828] rounded-lg transition-colors group"

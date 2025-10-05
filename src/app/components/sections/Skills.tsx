@@ -8,7 +8,7 @@ export default function Skills() {
       className="max-lg:col-span-1  max-lg:row-span-1 col-span-4 row-span-2 col-start-1 row-start-7 bg-spotify-light-dark rounded-xl h-fit"
       id="skills"
     >
-      <h1 className="text-2xl font-semibold pl-5 pt-3">Skills</h1>
+      <h1 className="text-2xl font-semibold pl-5 pt-2 pb-1">Skills</h1>
       <InfiniteMovingCards items={skillItems} speed="fast" className="" />
     </div>
   );
@@ -18,7 +18,7 @@ const skillItems: { quote: ReactNode; name: string }[] = [
   {
     quote: (
       <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
         width={40}
         height={40}
         alt="Java"
@@ -29,13 +29,68 @@ const skillItems: { quote: ReactNode; name: string }[] = [
   {
     quote: (
       <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
         width={40}
         height={40}
-        alt="Kubernetes"
+        alt="Spring Boot"
       />
     ),
-    name: "Kubernetes",
+    name: "Spring Boot",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg"
+        width={40}
+        height={40}
+        alt="Ruby"
+      />
+    ),
+    name: "Ruby",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg"
+        width={40}
+        height={40}
+        alt="Ruby on Rails"
+      />
+    ),
+    name: "Ruby on Rails",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+        width={40}
+        height={40}
+        alt="Golang"
+      />
+    ),
+    name: "Golang",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+        width={40}
+        height={40}
+        alt="PostgreSQL"
+      />
+    ),
+    name: "PostgreSQL",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+        width={40}
+        height={40}
+        alt="MySQL"
+      />
+    ),
+    name: "MySQL",
   },
   {
     quote: (
@@ -51,69 +106,13 @@ const skillItems: { quote: ReactNode; name: string }[] = [
   {
     quote: (
       <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
         width={40}
         height={40}
-        alt="IntelliJ"
+        alt="Kubernetes"
       />
     ),
-    name: "IntelliJ",
-  },
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
-        width={40}
-        height={40}
-        alt="Spring"
-      />
-    ),
-    name: "Spring",
-  },
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg"
-        width={40}
-        height={40}
-        alt="Ubuntu"
-      />
-    ),
-    name: "Ubuntu",
-  },
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg"
-        width={40}
-        height={40}
-        alt="ruby"
-      />
-    ),
-    name: "ruby",
-  },
- 
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
-        width={40}
-        height={40}
-        alt="PostreSQL"
-      />
-    ),
-    name: "PostreSQL",
-  },
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-        width={40}
-        height={40}
-        alt="mySQL"
-      />
-    ),
-    name: "MySQL",
+    name: "Kubernetes",
   },
   {
     quote: (
@@ -129,45 +128,34 @@ const skillItems: { quote: ReactNode; name: string }[] = [
   {
     quote: (
       <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
-        width={40}
-        height={40}
-        alt="Postman"
-      />
-    ),
-    name: "Postman",
-  },
-  {
-    quote: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
-        width={40}
-        height={40}
-        alt="npm"
-      />
-    ),
-    name: "npm",
-  },
-  {
-    quote: (
-      <Image
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
         width={40}
         height={40}
-        alt="git"
+        alt="Git"
       />
     ),
-    name: "git",
+    name: "Git",
   },
   {
     quote: (
       <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redhat/redhat-original.svg"
         width={40}
         height={40}
-        alt="apache"
+        alt="Red Hat"
       />
     ),
-    name: "apache",
+    name: "Red Hat",
+  },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+        width={40}
+        height={40}
+        alt="Redis"
+      />
+    ),
+    name: "Redis",
   },
 ];

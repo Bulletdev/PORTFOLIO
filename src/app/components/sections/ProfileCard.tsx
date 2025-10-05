@@ -13,13 +13,13 @@ export default function ProfileCard() {
       className="relative col-span-2 row-span-6 bg-spotify-light-dark rounded-xl p-3 max-md:p-3"
       id="#profile"
     >
-      <div className="flex flex-col gap-4 max-md:gap-3">
+      <div className="flex flex-col gap-3 max-md:gap-2">
         <BackgroundGradient containerClassName="rounded-[40px] place-self-center">
           <Image
             src="/Michael.jpeg"
             alt="Picture of the author"
-            width={400}
-            height={400}
+            width={350}
+            height={350}
             objectFit="none"
             className="rounded-[25px]"
           />
