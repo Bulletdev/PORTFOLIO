@@ -10,13 +10,28 @@ export type personalProjectType = {
 
 export const personalProjects: personalProjectType = [
   {
-    href: "https://github.com/bulletdev/bullet-cloud-api",
-    imageSrc: "/staticsitegenerator_infrastructure.png",
-    imageAlt: "Bullet Cloud API",
-    title: "Bullet Cloud API ♺",
-    description:
-      "API RESTful escalável para gerenciamento de produtos desenvolvida em Golang, com foco em performance e arquitetura cloud-native",
+    title: "API REST Golang",
+    description: "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang...",
+    imageSrc: "/api.png",
+    imageAlt: "API REST Golang para gerenciamento de produtos",
+    href: "https://github.com/Bulletdev/go-cart-api",
     tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
+  },
+  {
+    title: "clube do java E-commerce",
+    description: "Clube do Java E-commerce. Inclui desenvolvimento front-end com vue.js e back-end com Java...",
+    imageSrc: "/cdj.jpg",
+    imageAlt: "Clube do Java E-commerce",
+    href: "https://clubedojava.com.br/",
+    tech: ["Vue.js", "Java", "API Pagamento", "SEO", "Chatbot"],
+  },
+  {
+    title: "Fabmed Distribuidora",
+    description: "Rebranding visual da Fabmed Distribuidora, com foco em usabilidade e design moderno...",
+    imageSrc: "/fbm.jpg",
+    imageAlt: "Fabmed Distribuidora",
+    href: "https://fabmed.vercel.app/",
+    tech: ["React.js", "Node.js", "Intranet", "Chatbot", "SEO"],
   },
   {
     href: "https://github.com/bulletdev/portfolio",
