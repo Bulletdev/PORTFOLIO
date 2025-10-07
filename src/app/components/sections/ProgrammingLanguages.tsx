@@ -8,7 +8,7 @@ export default function ProgrammingLanguages() {
       id="programming-languages"
     >
       <div className="p-4">
-        <h1 className="text-xl font-bold mb-3">Stacks</h1>
+        <h1 className="text-xl font-bold mb-3">Tools</h1>
         <div className="grid grid-cols-5 max-xl:grid-cols-4 max-lg:grid-cols-5 max-md:grid-cols-4 max-sm:grid-cols-3 gap-3">
           {languageItems.map((item) => (
             <div
