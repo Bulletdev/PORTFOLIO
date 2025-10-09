@@ -43,11 +43,26 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = ["#6DC5D1", "#FDAF7B", "#90D26D"];
+  // Gradiente de cinza escuro para claro - segue a paleta do projeto
+  const backgroundColors = [
+    "#121212", // Cinza muito escuro (começo)
+    "#1a1a1a", // Cinza escuro
+    "#242424", // Cinza médio-escuro
+    "#2e2e2e", // Cinza médio
+    "#3a3a3a", // Cinza médio-claro
+    "#474747", // Cinza claro
+    "#565656", // Cinza mais claro
+    "#666666", // Cinza bem claro
+  ];
+
   const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    "linear-gradient(to bottom right, #121212, #1a1a1a)",
+    "linear-gradient(to bottom right, #1a1a1a, #242424)",
+    "linear-gradient(to bottom right, #242424, #2e2e2e)",
+    "linear-gradient(to bottom right, #2e2e2e, #3a3a3a)",
+    "linear-gradient(to bottom right, #3a3a3a, #474747)",
+    "linear-gradient(to bottom right, #474747, #565656)",
+    "linear-gradient(to bottom right, #565656, #666666)",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(

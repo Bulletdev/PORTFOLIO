@@ -45,7 +45,7 @@ const projectLists: {
   {
     title: "API REST Golang",
     description:
-      "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang. Permite integração de aplicações e conexão de componentes em arquiteturas de microsserviços, garantindo comunicação segura e eficiente entre sistemas.",
+      "API RESTful escalável construída com Golang para gerenciamento completo de e-commerce. Implementa arquitetura limpa com separação de camadas, suporte a Docker para deploy simplificado, e PostgreSQL para persistência robusta de dados. Inclui autenticação JWT, documentação Swagger, e endpoints otimizados para alta performance.",
     tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
     content: (
       <a target="_blank" href="https://github.com/Bulletdev/go-cart-api">
