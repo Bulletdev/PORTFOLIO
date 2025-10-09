@@ -6,8 +6,8 @@ import { ReactNode } from "react";
 
 export const InfiniteMovingCards = ({
   items,
-  direction = "left",
-  speed = "fast",
+  direction = "right",
+  speed = "fastest",
   pauseOnHover = true,
   className,
 }: {
@@ -16,7 +16,7 @@ export const InfiniteMovingCards = ({
     name: string;
   }[];
   direction?: "left" | "right";
-  speed?: "fast" | "normal" | "slow";
+  speed?: "fastest" | "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
 }) => {
@@ -60,7 +60,9 @@ export const InfiniteMovingCards = ({
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
+      if (speed === "fastest") {
+        containerRef.current.style.setProperty("--animation-duration", "10s");
+      } else if (speed === "fast") {
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
