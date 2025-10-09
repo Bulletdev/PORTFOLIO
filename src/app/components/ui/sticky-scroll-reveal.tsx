@@ -45,24 +45,28 @@ export const StickyScroll = ({
 
   // Gradiente de cinza escuro para claro - segue a paleta do projeto
   const backgroundColors = [
-    "#121212", // Cinza muito escuro (começo)
-    "#1a1a1a", // Cinza escuro
+    "#1a1a1a", // Cinza escuro (começo)
     "#242424", // Cinza médio-escuro
     "#2e2e2e", // Cinza médio
-    "#3a3a3a", // Cinza médio-claro
-    "#474747", // Cinza claro
-    "#565656", // Cinza mais claro
-    "#666666", // Cinza bem claro
+    "#383838", // Cinza médio
+    "#424242", // Cinza médio-claro
+    "#4d4d4d", // Cinza claro
+    "#585858", // Cinza mais claro
+    "#636363", // Cinza bem claro
+    "#6e6e6e", // Cinza muito claro
+    "#7a7a7a", // Cinza claríssimo
   ];
 
   const linearGradients = [
-    "linear-gradient(to bottom right, #121212, #1a1a1a)",
     "linear-gradient(to bottom right, #1a1a1a, #242424)",
     "linear-gradient(to bottom right, #242424, #2e2e2e)",
-    "linear-gradient(to bottom right, #2e2e2e, #3a3a3a)",
-    "linear-gradient(to bottom right, #3a3a3a, #474747)",
-    "linear-gradient(to bottom right, #474747, #565656)",
-    "linear-gradient(to bottom right, #565656, #666666)",
+    "linear-gradient(to bottom right, #2e2e2e, #383838)",
+    "linear-gradient(to bottom right, #383838, #424242)",
+    "linear-gradient(to bottom right, #424242, #4d4d4d)",
+    "linear-gradient(to bottom right, #4d4d4d, #585858)",
+    "linear-gradient(to bottom right, #585858, #636363)",
+    "linear-gradient(to bottom right, #636363, #6e6e6e)",
+    "linear-gradient(to bottom right, #6e6e6e, #7a7a7a)",
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
@@ -89,7 +93,7 @@ export const StickyScroll = ({
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
         opacity: "95%",
       }}
-      className="h-[38.5rem] overflow-y-auto flex justify-center relative space-x-4 rounded-md py-6 px-4"
+      className="h-[53rem] overflow-y-auto flex justify-center relative space-x-4 rounded-md py-6 px-4"
       ref={ref}
     >
       <div className="div relative flex items-start">
@@ -101,7 +105,7 @@ export const StickyScroll = ({
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0.6,
                 }}
                 className="text-xl font-bold text-slate-100"
               >
@@ -112,7 +116,7 @@ export const StickyScroll = ({
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0.6,
                 }}
                 className="text-sm text-spotify-white max-w-sm mt-4"
               >
@@ -123,7 +127,7 @@ export const StickyScroll = ({
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0.5,
                 }}
                 onClick={() => toggleExpand(index)}
                 className="mt-4 flex items-center gap-2 text-sm font-semibold text-spotify-green hover:text-white transition-colors"
