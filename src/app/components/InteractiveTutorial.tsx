@@ -57,7 +57,7 @@ export default function InteractiveTutorial() {
                 </h3>
                 <p className="text-sm leading-relaxed mb-3">
                   Clique no botão verde <FaPlay className="inline text-xs mx-1" />
-                  <strong> play</strong> na seção <strong>"Experiência Profissional"</strong>
+                  <strong> play</strong> na seção <strong>&quot;Experiência Profissional&quot;</strong>
                   para ver detalhes completos de cada cargo!
                 </p>
                 <p className="text-xs opacity-80">
