@@ -95,7 +95,7 @@ type PositionsProps = {
 
 function Positions({ positions, isPlaying }: PositionsProps) {
   return (
-    <div className="px-4 pb-2 md:overflow-y-auto h-[450px]">
+    <div className="px-4 pb-2 md:overflow-y-auto h-[470px]">
       {positions.map((position: experienceListsProps, index) => (
         <div
           className="flex items-center gap-4 p-2.5 hover:bg-[#282828] rounded-lg transition-colors group"

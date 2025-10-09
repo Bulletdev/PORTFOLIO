@@ -44,7 +44,6 @@ export default function SpotifyAlbum() {
         src="https://open.spotify.com/embed/playlist/3GmqDtsw56JmFY6cRHChKi?utm_source=generator"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
-        style={{ height: "72%", width: "100%" }}
         onClick={() => setShowNotification(false)}
       ></iframe>
     </div>
