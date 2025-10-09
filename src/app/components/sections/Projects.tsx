@@ -59,7 +59,7 @@ const projectLists: {
     ),
   },
   {
-    title: "clube do java E-commerce",
+    title: "Clube do Java E-commerce",
     description:
       "Clube do Java E-commerce. Inclui desenvolvimento front-end com vue.js e back-end com Java, além de integração com sistemas de API de pagamento, correios, chatbot e otimização para SEO.",
     tech: ["Vue.js", "Java", "API Pagamento", "SEO", "Chatbot"],
