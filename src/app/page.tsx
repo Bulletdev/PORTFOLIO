@@ -9,7 +9,7 @@ import ProgrammingLanguages from "./components/sections/ProgrammingLanguages";
 import SpotifyAlbum from "./components/sections/SpotifyAlbum";
 import ExperienceItem from "./components/sections/ExperienceItems";
 import OpenedExperienceItem from "./components/sections/OpenedExperienceItem";
-import { motion } from "framer-motion";
+import InteractiveTutorial from "./components/InteractiveTutorial";
 
 export interface ProjectsProps {
   onSetExperienceSection?: () => void;
@@ -24,6 +24,7 @@ export default function Home() {
 
   return (
     <>
+      <InteractiveTutorial />
       <main className="w-screen max-w-[1800px] mx-auto pt-2 px-16 grid grid-cols-6 grid-rows-8 max-md:gap-2 gap-2 max-lg:flex max-lg:flex-col max-md:px-6 mb-4">
         <ProfileCard />
         {experienceSection ? (
