@@ -110,6 +110,23 @@ const projectLists: {
     ),
   },
   {
+    title: "Arremate Certo",
+    description:
+      "Plataforma de automação para processos licitatórios e dispensas públicas. Arquitetura híbrida com backend Java Spring Boot e Go Gin, oferecendo lances automatizados com regras customizáveis, relatórios detalhados de participação, integração com portais públicos e privados, e gestão segura de dados com criptografia Bouncy Castle.",
+    tech: ["Java Spring Boot", "Go", "PostgreSQL", "Apache Kafka", "Vue.js"],
+    content: (
+      <a target="_blank" href="https://github.com/Bulletdev/Arremate-certo">
+        <Image
+          src="/arremate.png"
+          alt="Arremate Certo - Automação de Licitações"
+          loading="lazy"
+          width={700}
+          height={300}
+        />
+      </a>
+    ),
+  },
+  {
     title: "Portfolio Pessoal",
     description:
       "Portfolio responsivo e moderno com design inspirado no Spotify, construído com Next.js 14 e Tailwind CSS. Apresenta projetos, habilidades e experiências de forma elegante, destacando-se pela usabilidade e estética visual.",
