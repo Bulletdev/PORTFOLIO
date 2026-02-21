@@ -42,6 +42,23 @@ const projectLists: {
   content?: React.ReactNode | any;
   tech?: string[];
 }[] = [
+    {
+    title: "ProStaff API",
+    description:
+      "API Ruby on Rails robusta para gerenciamento de equipes de e-sports. Arquitetura modular monolítica com módulos dedicados para scouting, analytics, agendamento e integração com API da Riot Games. Inclui autenticação JWT, processamento assíncrono com Sidekiq, cache Redis e testes automatizados com RSpec.",
+    tech: ["Ruby on Rails", "PostgreSQL", "Redis", "Sidekiq", "API Riot Games"],
+    content: (
+      <a target="_blank" href="https://github.com/Bulletdev/prostaff-api">
+        <Image
+          src="/prostaff.png"
+          alt="ProStaff API - Gerenciamento de Equipes E-sports"
+          loading="lazy"
+          width={700}
+          height={300}
+        />
+      </a>
+    ),
+  },
   {
     title: "API REST Golang",
     description:
@@ -92,23 +109,7 @@ const projectLists: {
       </a>
     ),
   },
-  {
-    title: "ProStaff API",
-    description:
-      "API Ruby on Rails robusta para gerenciamento de equipes de e-sports. Arquitetura modular monolítica com módulos dedicados para scouting, analytics, agendamento e integração com API da Riot Games. Inclui autenticação JWT, processamento assíncrono com Sidekiq, cache Redis e testes automatizados com RSpec.",
-    tech: ["Ruby on Rails", "PostgreSQL", "Redis", "Sidekiq", "API Riot Games"],
-    content: (
-      <a target="_blank" href="https://github.com/Bulletdev/prostaff-api">
-        <Image
-          src="/prostaff.png"
-          alt="ProStaff API - Gerenciamento de Equipes E-sports"
-          loading="lazy"
-          width={700}
-          height={300}
-        />
-      </a>
-    ),
-  },
+
   {
     title: "Arremate Certo",
     description:
