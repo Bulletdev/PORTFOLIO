@@ -11,6 +11,27 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Michael Bullet",
   description: "Michael Bullet Portfolio",
+  openGraph: {
+    title: "Michael Bullet",
+    description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
+    url: "https://michaelbullet.dev",
+    siteName: "Michael Bullet Portfolio",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1340,
+        height: 860,
+        alt: "Michael Bullet Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Michael Bullet",
+    description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
+    images: ["/preview.png"],
+  },
 };
 
 export default function RootLayout({
