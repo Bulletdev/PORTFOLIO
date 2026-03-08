@@ -10,20 +10,29 @@ export type personalProjectType = {
 
 export const personalProjects: personalProjectType = [
   {
-    title: "API REST Golang",
-    description: "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang...",
-    imageSrc: "/api.png",
-    imageAlt: "API REST Golang para gerenciamento de produtos",
-    href: "https://github.com/Bulletdev/go-cart-api",
-    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
-  },
-  {
     title: "clube do java E-commerce",
     description: "Clube do Java E-commerce. Inclui desenvolvimento front-end com vue.js e back-end com Java...",
     imageSrc: "/cdj.jpg",
     imageAlt: "Clube do Java E-commerce",
     href: "https://clubedojava.com.br/",
     tech: ["Vue.js", "Java", "API Pagamento", "SEO", "Chatbot"],
+  },
+  {
+    href: "https://github.com/Bulletdev/KingsLendas",
+    imageSrc: "/kingslendas.png",
+    imageAlt: "Kings Lendas Cup",
+    title: "Kings Lendas Cup",
+    description:
+      "Plataforma de torneio de League of Legends com standings ao vivo, calendário de partidas, perfis de times e jogadores, e estatísticas de campeões. Integração com a API Leaguepedia.",
+    tech: ["Ruby on Rails", "TailwindCSS", "Hotwire", "SQLite", "Docker", "Redis"],
+  },
+  {
+    title: "API REST Golang",
+    description: "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang...",
+    imageSrc: "/api.png",
+    imageAlt: "API REST Golang para gerenciamento de produtos",
+    href: "https://github.com/Bulletdev/go-cart-api",
+    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
   },
   {
     title: "Fabmed Distribuidora",
@@ -41,23 +50,5 @@ export const personalProjects: personalProjectType = [
     description:
       "Portfolio responsivo e moderno com design inspirado no Spotify, construído com Next.js 14 e Tailwind CSS",
     tech: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
-  },
-  {
-    href: "https://github.com/bulletdev/pipeline-automatizador",
-    imageSrc: "/cicd.png",
-    imageAlt: "Automatizador de Pipeline CI/CD",
-    title: "Automatizador de Pipeline CI/CD ♺",
-    description:
-      "Ferramenta desktop para automação de pipelines CI/CD com interface gráfica intuitiva, integração com Jenkins e suporte a containers Docker",
-    tech: ["Java", "JavaFX", "Docker", "Shell Script", "Jenkins"],
-  },
-  {
-    href: "https://github.com/bulletdev/sql-query-builder",
-    imageSrc: "/sql.jpg",
-    imageAlt: "SQL Query Builder Multi-Database",
-    title: "SQL Query Builder 🛢️",
-    description:
-      "Gerador automático de queries SQL com suporte multi-database (MySQL, PostgreSQL, Oracle), reduzindo tempo de desenvolvimento em 70%",
-    tech: ["Python", "Golang", "SQL", "Shell Script"],
   },
 ];

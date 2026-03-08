@@ -60,17 +60,18 @@ const projectLists: {
     ),
   },
   {
-    title: "API REST Golang",
+    title: "Kings Lendas Cup",
     description:
-      "API RESTful escalável construída com Golang para gerenciamento completo de e-commerce. Implementa arquitetura limpa com separação de camadas, suporte a Docker para deploy simplificado, e PostgreSQL para persistência robusta de dados. Inclui autenticação JWT, documentação Swagger, e endpoints otimizados para alta performance.",
-    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
+      "Plataforma de torneio de League of Legends com standings ao vivo, calendário de partidas, perfis de times e jogadores, rastreamento de KDA e análise de draft. Integração com a API Leaguepedia para sincronização automática de dados.",
+    tech: ["Ruby on Rails", "TailwindCSS", "Hotwire", "SQLite", "Docker", "Redis"],
     content: (
-      <a target="_blank" href="https://github.com/Bulletdev/go-cart-api">
+      <a target="_blank" href="https://github.com/Bulletdev/KingsLendas">
         <Image
-          src="/api.png"
-          alt="API REST Golang para gerenciamento de produtos"
-          width={500}
-          height={500}
+          src="/kingslendas.webp"
+          alt="Kings Lendas Cup - Torneio de League of Legends"
+          loading="lazy"
+          width={700}
+          height={300}
         />
       </a>
     ),
@@ -88,6 +89,22 @@ const projectLists: {
           loading="lazy"
           width={700}
           height={300}
+        />
+      </a>
+    ),
+  },
+  {
+    title: "API REST Golang",
+    description:
+      "API RESTful escalável construída com Golang para gerenciamento completo de e-commerce. Implementa arquitetura limpa com separação de camadas, suporte a Docker para deploy simplificado, e PostgreSQL para persistência robusta de dados. Inclui autenticação JWT, documentação Swagger, e endpoints otimizados para alta performance.",
+    tech: ["Golang", "API REST", "Docker", "PostgreSQL"],
+    content: (
+      <a target="_blank" href="https://github.com/Bulletdev/go-cart-api">
+        <Image
+          src="/api.png"
+          alt="API REST Golang para gerenciamento de produtos"
+          width={500}
+          height={500}
         />
       </a>
     ),
