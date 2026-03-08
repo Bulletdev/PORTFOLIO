@@ -48,8 +48,7 @@ export default function Navigation(): ReactNode {
             />
           </Link>
 
-          {/*Hidden on Mobile*/}
-          <section className="flex flex-row gap-5 items-center max-sm:hidden">
+          <section className="flex flex-row gap-5 items-center">
             <SocialLinks />
             <PiLineVerticalThin className="text-spotify-gray text-4xl" />
             <NavButton name="Currículo"/>

@@ -36,15 +36,6 @@ export const personalProjects: personalProjectType = [
     tech: ["Vue.js", "Java", "API Pagamento", "SEO", "Chatbot"],
   },
   {
-    href: "https://github.com/Bulletdev/KingsLendas",
-    imageSrc: "/kingslendas.png",
-    imageAlt: "Kings Lendas Cup",
-    title: "Kings Lendas Cup",
-    description:
-      "Plataforma de torneio de League of Legends com standings ao vivo, calendário de partidas, perfis de times e jogadores, e estatísticas de campeões. Integração com a API Leaguepedia.",
-    tech: ["Ruby on Rails", "TailwindCSS", "Hotwire", "SQLite", "Docker", "Redis"],
-  },
-  {
     title: "API REST Golang",
     description: "API RESTful modular para gerenciamento de E-commerce desenvolvida em Golang...",
     imageSrc: "/api.png",
