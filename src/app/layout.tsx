@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Michael Bullet Portfolio",
     images: [
       {
-        url: "/preview.png",
+        url: "https://michaelbullet.dev/preview.png",
         width: 1340,
         height: 860,
         alt: "Michael Bullet Portfolio",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Michael Bullet",
     description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
-    images: ["/preview.png"],
+    images: ["https://michaelbullet.dev/preview.png"],
   },
 };
 
