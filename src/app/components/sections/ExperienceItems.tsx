@@ -139,16 +139,26 @@ type experienceListsProps = {
 const experienceLists: experienceListsProps[] = [
   {
     imageSrc: "/ESR.svg",
-    companyName: "Effecti",
-    positionTitle: "Desenvolvedor Full Stack",
-    date: "Janeiro de 2025 - Presente",
+    companyName: "Plathanus Software & Design",
+    positionTitle: "Full Stack Engineer Pleno",
+    date: "Dezembro de 2025 - Presente",
     description: [
-      "Desenvolvimento de aplicações web utilizando Vue.js, php como cache, Java e Ruby on Rails",
-      "Implementação de APIs RESTful e integração com bancos de dados",
-      "Otimização de performance e escalabilidade de sistemas",
-      "Participação em code reviews e melhoria contínua de processos",
-      "Mentoria de desenvolvedores juniores",
-      "Colaboração em projetos ágeis com metodologia Scrum"
+      "Projetei e implementei integração completa de PIX Automático Recorrente com a Open Finance API do Itaú, incluindo autenticação mTLS/OAuth 2.0, geração de QR codes, processamento de webhooks, retentativas automáticas e conciliação financeira.",
+      "Construí do zero um middleware de emissão de NFSe via API Sefin Nacional (Receita Federal), com conversão de formato XML (ABRASF → DPS), assinatura digital com certificado A1 e pipeline assíncrono de processamento via Sidekiq.",
+      "Modernizei codebase legado Rails 2.x, melhorando arquitetura, manutenibilidade e compatibilidade com integrações modernas.",
+      "Mantive e evoluí portal de clientes em Rails 7 com integrações SOAP, dashboards por perfil de acesso (Síndico, Financeiro, DP) e sustentação do sistema legado de gestão condominial.",
+      "Criei e evolui documentações técnicas e levantamento de requisitos funcionais e não funcionais."
+    ]
+  },
+  {
+    imageSrc: "/ESR.svg",
+    companyName: "Effecti",
+    positionTitle: "Desenvolvedor Full Stack Pleno",
+    date: "Janeiro de 2025 - Dezembro de 2025",
+    description: [
+      "Desenvolvi e otimizei microsserviços em Ruby on Rails e Java para scraping e automação de licitações, processando >1.5 milhão de registros/dia, reduzindo tempo médio de extração em 42% (de ~4s para <2.4s por página).",
+      "Liderei migração de 4 serviços críticos de Java monólito para Golang + Serverless (Lambda + SQS + API Gateway), cortando latência p95 em 78% (1.4s → 310ms) e reduzindo custo mensal de infraestrutura em 40%.",
+      "Implementei background jobs resilientes com Sidekiq + Redis, processando +85.000 registros/dia com taxa de sucesso >99.8% e tempo médio de retry <5s em falhas transitórias."
     ]
   },
   {
