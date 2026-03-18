@@ -159,4 +159,15 @@ const skillItems: { quote: ReactNode; name: string }[] = [
     ),
     name: "Redis",
   },
+  {
+    quote: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg"
+        width={40}
+        height={40}
+        alt="JUnit"
+      />
+    ),
+    name: "JUnit",
+  },
 ];

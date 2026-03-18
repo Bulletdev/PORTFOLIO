@@ -30,18 +30,6 @@ const languageItems: {
   component: ReactNode;
 }[] = [
 
-  // Ferramentas de Teste Java
-  {
-    name: "JUnit",
-    component: (
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg"
-        width={50}
-        height={50}
-        alt="JUnit"
-      />
-    ),
-  },
   // Ferramentas Ruby
   {
     name: "RSpec",

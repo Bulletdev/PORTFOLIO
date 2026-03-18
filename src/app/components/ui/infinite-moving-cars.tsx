@@ -91,11 +91,8 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className="relative rounded-2xl flex-shrink-0 md:w-[100px]"
-            // style={{
-            //   background:
-            //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-            // }}
             key={item.name}
+            title={item.name}
           >
             <blockquote className="flex flex-col items-center">
               <div
