@@ -62,6 +62,7 @@ const languageItems: {
         width={50}
         height={50}
         alt="Sidekiq"
+        style={{ width: "auto", height: "auto" }}
       />
     ),
   },

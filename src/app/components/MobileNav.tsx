@@ -15,7 +15,7 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
   ];
 
   return (
-    <nav className="bg-spotify-light-dark flex flex-col text-left sm:hidden">
+    <nav className="bg-spotify-light-dark flex flex-col text-left sm:hidden rounded-b-xl">
       {links.map((link, index) => (
         <div
           key={index}

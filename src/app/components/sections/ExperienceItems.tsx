@@ -95,7 +95,7 @@ type PositionsProps = {
 
 function Positions({ positions, isPlaying }: PositionsProps) {
   return (
-    <div className="px-4 pb-2 md:overflow-y-auto h-[470px]">
+    <div className="px-4 pb-2 md:overflow-y-auto md:h-[470px]">
       {positions.map((position: experienceListsProps, index) => (
         <div
           className="flex items-center gap-4 p-2.5 hover:bg-[#282828] rounded-lg transition-colors group"
@@ -140,7 +140,7 @@ const experienceLists: experienceListsProps[] = [
   {
     imageSrc: "/ESR.svg",
     companyName: "Plathanus Software & Design",
-    positionTitle: "Full Stack Engineer Pleno",
+    positionTitle: "Mid Level Software Engineer",
     date: "Dezembro de 2025 - Presente",
     description: [
       "Projetei e implementei integração completa de PIX Automático Recorrente com a Open Finance API do Itaú, incluindo autenticação mTLS/OAuth 2.0, geração de QR codes, processamento de webhooks, retentativas automáticas e conciliação financeira.",

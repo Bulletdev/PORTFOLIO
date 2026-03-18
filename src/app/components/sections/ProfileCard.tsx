@@ -20,8 +20,9 @@ export default function ProfileCard() {
             alt="Picture of the author"
             width={350}
             height={350}
-            objectFit="none"
+            priority
             className="rounded-[25px]"
+            style={{ width: "auto", height: "auto" }}
           />
         </BackgroundGradient>
 

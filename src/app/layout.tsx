@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Michael Bullet",
   description: "Michael Bullet Portfolio",
+  icons: { icon: "/bulletlogo.png" },
   openGraph: {
     title: "Michael Bullet",
     description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
@@ -41,21 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/luan.jpg" sizes="any" />
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-      </head>
       <body className={inter.className}>
         <GeneralProvider>
           <Navigation />

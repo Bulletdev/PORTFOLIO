@@ -43,7 +43,7 @@ export default function InteractiveTutorial() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="fixed top-6 left-1/2 -translate-x-1/2 z-50 max-w-lg w-full mx-4"
+          className="fixed top-6 left-1/2 -translate-x-1/2 z-50 max-w-lg w-[calc(100%_-_2rem)]"
         >
           <div className="bg-gradient-to-r from-spotify-green to-green-500 text-spotify-black p-5 rounded-2xl shadow-2xl border-2 border-white/20">
             <div className="flex items-start gap-4">
