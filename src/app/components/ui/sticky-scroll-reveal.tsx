@@ -4,6 +4,8 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { IoPlayCircle } from "react-icons/io5";
+import { useLanguage } from "../../contexts/languageContext";
 
 export const StickyScroll = ({
   content,
@@ -14,6 +16,7 @@ export const StickyScroll = ({
     description: string;
     content?: React.ReactNode | any;
     tech?: string[];
+    href?: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -78,6 +81,10 @@ export const StickyScroll = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCard]);
 
+  const { language } = useLanguage();
+  const showDetails = language === "en" ? "Show Details" : "Ver Detalhes";
+  const hideDetails = language === "en" ? "Hide Details" : "Ocultar Detalhes";
+
   const toggleExpand = (index: number) => {
     const newExpanded = new Set(expandedCards);
     if (newExpanded.has(index)) {
@@ -119,7 +126,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.6,
                 }}
-                className="text-sm text-spotify-white max-w-sm mt-4"
+                className="text-sm text-spotify-white max-w-sm mt-4 leading-relaxed tracking-wide hyphens-auto break-words"
               >
                 {item.description}
               </motion.p>
@@ -135,11 +142,11 @@ export const StickyScroll = ({
               >
                 {expandedCards.has(index) ? (
                   <>
-                    Ocultar Detalhes <FaChevronUp className="text-xs" />
+                    {hideDetails} <FaChevronUp className="text-xs" />
                   </>
                 ) : (
                   <>
-                    Ver Detalhes <FaChevronDown className="text-xs" />
+                    {showDetails} <FaChevronDown className="text-xs" />
                   </>
                 )}
               </motion.button>
@@ -168,8 +175,26 @@ export const StickyScroll = ({
 
                   {/* Miniatura */}
                   {item.content && (
-                    <div className="rounded-lg overflow-hidden">
-                      {item.content}
+                    <div className="space-y-2">
+                      <div className="relative group/img rounded-lg overflow-hidden">
+                        {item.content}
+                        {item.href && (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover/img:opacity-100 transition-opacity"
+                          >
+                            <IoPlayCircle className="text-spotify-green text-6xl drop-shadow-lg" />
+                          </a>
+                        )}
+                      </div>
+                      {item.href && (
+                        <p className="flex items-center justify-center gap-2 text-xs text-spotify-grey">
+                          <IoPlayCircle className="text-spotify-green text-sm" />
+                          <span>{language === "en" ? "Click play to open the project" : "Clique no play para abrir o projeto"}</span>
+                        </p>
+                      )}
                     </div>
                   )}
                 </motion.div>

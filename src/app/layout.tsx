@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
-import EmbedediFrame from "./components/EmbedediFrame";
 import { GeneralProvider } from "./contexts/generalContext";
+import { LanguageProvider } from "./contexts/languageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   icons: { icon: "/bulletlogo.png" },
   openGraph: {
     title: "Michael Bullet",
-    description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
+    description: "FullStack Developer • Java • Ruby on Rails • Vue.js",
     url: "https://michaelbullet.dev",
     siteName: "Michael Bullet Portfolio",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Michael Bullet",
-    description: "Desenvolvedor FullStack • Java • Ruby on Rails • Vue.js ",
+    description: "FullStack Developer • Java • Ruby on Rails • Vue.js",
     images: ["https://michaelbullet.dev/preview.png"],
   },
 };
@@ -43,11 +43,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <GeneralProvider>
-          <Navigation />
-          {children}
-          {/* <EmbedediFrame /> */}
-        </GeneralProvider>
+        <LanguageProvider>
+          <GeneralProvider>
+            <Navigation />
+            {children}
+          </GeneralProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -8,28 +8,26 @@ import { MdOutlineDownloadForOffline } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaPlay, FaPause } from "react-icons/fa";
-import Image from "next/image";
+import { useLanguage } from "../../contexts/languageContext";
+import type { Job } from "../../../../i18n/types";
 
 export default function ExperienceItem() {
+  const { t, language } = useLanguage();
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isShuffled, setIsShuffled] = useState(false);
-  const [positions, setPositions] = useState(experienceLists);
-  const [originalPositions] = useState(experienceLists);
+  const [showTech, setShowTech] = useState(false);
+  const [showTrivia, setShowTrivia] = useState(false);
+  const [shuffledIndexes, setShuffledIndexes] = useState<number[] | null>(null);
 
-  const handlePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
+  const jobs = t.experience.jobs;
+  const positions = shuffledIndexes ? shuffledIndexes.map((i) => jobs[i]) : jobs;
+  const isShuffled = shuffledIndexes !== null;
 
   const handleShuffle = () => {
-    if (isShuffled) {
-      // Volta ao estado original
-      setPositions(originalPositions);
-      setIsShuffled(false);
+    if (shuffledIndexes) {
+      setShuffledIndexes(null);
     } else {
-      // Embaralha
-      const shuffled = [...positions].sort(() => Math.random() - 0.5);
-      setPositions(shuffled);
-      setIsShuffled(true);
+      const indexes = jobs.map((_, i) => i).sort(() => Math.random() - 0.5);
+      setShuffledIndexes(indexes);
     }
   };
 
@@ -39,10 +37,10 @@ export default function ExperienceItem() {
       id="#experience"
     >
       <div className="bg-spotify-gray px-6 py-4">
-        <h2 className="text-xl font-bold mb-1">Experiência Profissional</h2>
+        <h2 className="text-xl font-bold mb-1">{t.experience.sectionTitle}</h2>
         <p className="flex items-center gap-1.5 text-spotify-grey text-sm">
           <CiGlobe className="text-lg" />
-          +4 anos de experiência
+          {t.experience.yearsExp}
         </p>
       </div>
 
@@ -50,9 +48,9 @@ export default function ExperienceItem() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
-              onClick={handlePlay}
+              onClick={() => setIsPlaying(!isPlaying)}
               className="rounded-full bg-spotify-green p-3.5 hover:scale-105 hover:bg-spotify-dark-green transition-all duration-200"
-              title={isPlaying ? "Ocultar descrições" : "Mostrar descrições"}
+              title={isPlaying ? t.experience.hideDescriptions : t.experience.showDescriptions}
             >
               {isPlaying ? (
                 <FaPause className="text-spotify-black text-sm" />
@@ -64,18 +62,34 @@ export default function ExperienceItem() {
               <button
                 onClick={handleShuffle}
                 className="cursor-pointer"
-                title={isShuffled ? "Ordenação original" : "Embaralhar"}
+                title={isShuffled ? t.experience.originalOrder : t.experience.shuffle}
               >
                 <IoShuffle
                   className={`text-3xl transition-all duration-200 ${
-                    isShuffled
-                      ? 'text-spotify-green'
-                      : 'text-spotify-grey hover:text-white'
+                    isShuffled ? "text-spotify-green" : "text-spotify-grey hover:text-white"
                   }`}
                 />
               </button>
-              <FiPlusCircle className="text-2xl text-spotify-grey hover:text-white transition-colors cursor-pointer" />
-              <MdOutlineDownloadForOffline className="text-2xl text-spotify-grey hover:text-white transition-colors cursor-pointer" />
+              <button
+                onClick={() => { setShowTech(!showTech); setShowTrivia(false); }}
+                title={language === "en" ? "Show tech stack" : "Mostrar stack"}
+              >
+                <FiPlusCircle
+                  className={`text-2xl transition-all duration-200 ${
+                    showTech ? "text-spotify-green" : "text-spotify-grey hover:text-white"
+                  }`}
+                />
+              </button>
+              <button
+                onClick={() => { setShowTrivia(!showTrivia); setShowTech(false); }}
+                title={language === "en" ? "Reveal curiosities" : "Revelar curiosidades"}
+              >
+                <MdOutlineDownloadForOffline
+                  className={`text-2xl transition-all duration-200 ${
+                    showTrivia ? "text-spotify-green" : "text-spotify-grey hover:text-white"
+                  }`}
+                />
+              </button>
               <BsThreeDots className="text-2xl text-spotify-grey hover:text-white transition-colors cursor-pointer" />
             </div>
           </div>
@@ -83,20 +97,22 @@ export default function ExperienceItem() {
         </div>
       </div>
 
-      <Positions positions={positions} isPlaying={isPlaying} />
+      <Positions positions={positions} isPlaying={isPlaying} showTech={showTech} showTrivia={showTrivia} />
     </section>
   );
 }
 
 type PositionsProps = {
-  positions: experienceListsProps[];
+  positions: Job[];
   isPlaying: boolean;
+  showTech: boolean;
+  showTrivia: boolean;
 };
 
-function Positions({ positions, isPlaying }: PositionsProps) {
+function Positions({ positions, isPlaying, showTech, showTrivia }: PositionsProps) {
   return (
     <div className="px-4 pb-2 md:overflow-y-auto md:h-[470px]">
-      {positions.map((position: experienceListsProps, index) => (
+      {positions.map((position: Job, index) => (
         <div
           className="flex items-center gap-4 p-2.5 hover:bg-[#282828] rounded-lg transition-colors group"
           key={`${position.companyName}-${index}`}
@@ -111,7 +127,25 @@ function Positions({ positions, isPlaying }: PositionsProps) {
             <p className="font-bold text-md mb-0.5">{position.positionTitle}</p>
             <p className="text-spotify-gray text-sm">{position.date}</p>
 
-            {/* Descrição que aparece quando o Play está ativo */}
+            {showTech && position.tech && (
+              <div className="mt-2 flex flex-wrap gap-1.5 animate-fadeIn">
+                {position.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[10px] font-semibold bg-spotify-green/15 text-spotify-green border border-spotify-green/30 px-2 py-0.5 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {showTrivia && position.trivia && (
+              <div className="mt-2 text-xs text-spotify-light-gray bg-white/5 border border-white/10 rounded-lg px-3 py-2 leading-relaxed animate-fadeIn">
+                {position.trivia}
+              </div>
+            )}
+
             {isPlaying && position.description && (
               <div className="mt-2 text-spotify-light-gray text-sm leading-relaxed animate-fadeIn">
                 <ul className="list-disc list-inside space-y-1">
@@ -127,78 +161,3 @@ function Positions({ positions, isPlaying }: PositionsProps) {
     </div>
   );
 }
-
-type experienceListsProps = {
-  imageSrc: string;
-  companyName: string;
-  positionTitle: string;
-  date: string;
-  description?: string[];
-};
-
-const experienceLists: experienceListsProps[] = [
-  {
-    imageSrc: "/ESR.svg",
-    companyName: "Plathanus Software & Design",
-    positionTitle: "Mid Level Software Engineer",
-    date: "Dezembro de 2025 - Presente",
-    description: [
-      "Projetei e implementei integração completa de PIX Automático Recorrente com a Open Finance API do Itaú, incluindo autenticação mTLS/OAuth 2.0, geração de QR codes, processamento de webhooks, retentativas automáticas e conciliação financeira.",
-      "Construí do zero um middleware de emissão de NFSe via API Sefin Nacional (Receita Federal), com conversão de formato XML (ABRASF → DPS), assinatura digital com certificado A1 e pipeline assíncrono de processamento via Sidekiq.",
-      "Modernizei codebase legado Rails 2.x, melhorando arquitetura, manutenibilidade e compatibilidade com integrações modernas.",
-      "Mantive e evoluí portal de clientes em Rails 7 com integrações SOAP, dashboards por perfil de acesso (Síndico, Financeiro, DP) e sustentação do sistema legado de gestão condominial.",
-      "Criei e evolui documentações técnicas e levantamento de requisitos funcionais e não funcionais."
-    ]
-  },
-  {
-    imageSrc: "/ESR.svg",
-    companyName: "Effecti",
-    positionTitle: "Desenvolvedor Full Stack Pleno",
-    date: "Janeiro de 2025 - Dezembro de 2025",
-    description: [
-      "Desenvolvi e otimizei microsserviços em Ruby on Rails e Java para scraping e automação de licitações, processando >1.5 milhão de registros/dia, reduzindo tempo médio de extração em 42% (de ~4s para <2.4s por página).",
-      "Liderei migração de 4 serviços críticos de Java monólito para Golang + Serverless (Lambda + SQS + API Gateway), cortando latência p95 em 78% (1.4s → 310ms) e reduzindo custo mensal de infraestrutura em 40%.",
-      "Implementei background jobs resilientes com Sidekiq + Redis, processando +85.000 registros/dia com taxa de sucesso >99.8% e tempo médio de retry <5s em falhas transitórias."
-    ]
-  },
-  {
-    imageSrc: "/pinear-logo.svg",
-    companyName: "Accenture",
-    positionTitle: "Desenvolvedor Backend Pleno",
-    date: "Março de 2020 - Março de 2022",
-    description: [
-      "Desenvolvimento de microserviços com Spring Boot",
-      "Integração com APIs de terceiros e sistemas legados Ruby on Rails",
-      "Testes unitários e de integração com JUnit e Mockito",
-      "Participação em reuniões de planejamento e refinamento de sprints",
-      "Colaboração com equipes multidisciplinares",
-      "Code review e mentoria de desenvolvedores júnior"
-    ]
-  },
-  {
-    imageSrc: "/asu.svg",
-    companyName: "Accenture",
-    positionTitle: "Desenvolvedor Backend Júnior",
-    date: "Fevereiro de 2019 - Março de 2020",
-    description: [
-      "Desenvolvimento de funcionalidades em sistemas enterprise",
-      "Manutenção e correção de bugs em aplicações Java",
-      "Participação em dailies e retrospectivas",
-      "Colaboração com equipes de desenvolvimento ágil",
-      "Aprendizado de boas práticas de programação"
-
-    ]
-  },
-  {
-    imageSrc: "/asu.svg",
-    companyName: "Pirelli Pneus",
-    positionTitle: "Desenvolvedor Júnior",
-    date: "Outubro de 2017 - Outubro de 2018",
-    description: [
-      "Desenvolvimento de sistemas internos para controle de produção",
-      "Criação de relatórios e dashboards",
-      "Suporte a usuários finais",
-      "Documentação técnica de sistemas"
-    ]
-  }
-];

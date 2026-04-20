@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Skills() {
   return (
     <div
-      className="max-lg:col-span-1  max-lg:row-span-1 col-span-4 row-span-2 col-start-1 row-start-7 bg-spotify-light-dark rounded-xl overflow-hidden"
+      className="max-lg:col-span-1  max-lg:row-span-1 col-span-6 row-span-2 col-start-1 row-start-7 bg-spotify-light-dark rounded-xl overflow-hidden"
       id="skills"
       style={{ height: "155px" }}
     >

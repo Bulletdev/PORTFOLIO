@@ -11,9 +11,11 @@ import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 import MobileNav from "./MobileNav";
 import { TypewriterEffect } from "./ui/type-writer-effect";
+import { useLanguage } from "../contexts/languageContext";
 
 export default function Navigation(): ReactNode {
   const [mobile, setMobile] = useState<boolean>(false);
+  const { t, toggleLanguage } = useLanguage();
 
   function handleMobile(): void {
     setMobile((prev) => !prev);
@@ -37,7 +39,6 @@ export default function Navigation(): ReactNode {
 
           <Link href="/" className="flex gap-2 text-3xl font-bold items-center">
             <FaCode className="text-spotify-green w-[70px]" />
-            {/* <h1 className="max-lg:hidden">Michael Bullet</h1> */}
             <TypewriterEffect
               words={[
                 { text: "Michael", className: "text-3xl" },
@@ -50,7 +51,14 @@ export default function Navigation(): ReactNode {
           <section className="flex flex-row gap-5 items-center">
             <SocialLinks />
             <PiLineVerticalThin className="text-spotify-gray text-4xl" />
-            <NavButton name="Currículo"/>
+            <button
+              onClick={toggleLanguage}
+              className="text-sm font-bold text-spotify-gray hover:text-white transition-colors px-2"
+              title="Switch language"
+            >
+              {t.nav.toggleLang}
+            </button>
+            <NavButton name={t.nav.resume} href={t.cvUrl} />
           </section>
         </section>
         {mobile && <MobileNav handleMobile={handleMobile} />}

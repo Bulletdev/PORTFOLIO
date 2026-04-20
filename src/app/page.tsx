@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import ProgrammingLanguages from "./components/sections/ProgrammingLanguages";
-import SpotifyAlbum from "./components/sections/SpotifyAlbum";
 import ExperienceItem from "./components/sections/ExperienceItems";
 import OpenedExperienceItem from "./components/sections/OpenedExperienceItem";
 import InteractiveTutorial from "./components/InteractiveTutorial";
@@ -42,7 +41,6 @@ export default function Home() {
         <OpenedExperienceItem className="block md:hidden" />
 
         <Skills />
-        <SpotifyAlbum />
         <Footer />
       </main>
     </>

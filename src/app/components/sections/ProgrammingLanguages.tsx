@@ -142,6 +142,7 @@ const languageItems: {
         width={50}
         height={50}
         alt="Kafka"
+        style={{ filter: "invert(1)" }}
       />
     ),
   },
