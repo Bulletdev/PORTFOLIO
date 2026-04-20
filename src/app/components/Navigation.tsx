@@ -50,15 +50,17 @@ export default function Navigation(): ReactNode {
 
           <section className="flex flex-row gap-5 items-center">
             <SocialLinks />
-            <PiLineVerticalThin className="text-spotify-gray text-4xl" />
+            <PiLineVerticalThin className="max-md:hidden text-spotify-gray text-4xl" />
             <button
               onClick={toggleLanguage}
-              className="text-sm font-bold text-spotify-gray hover:text-white transition-colors px-2"
+              className="max-md:hidden text-sm font-bold text-spotify-gray hover:text-white transition-colors px-2"
               title="Switch language"
             >
               {t.nav.toggleLang}
             </button>
-            <NavButton name={t.nav.resume} href={t.cvUrl} />
+            <div className="max-md:hidden">
+              <NavButton name={t.nav.resume} href={t.cvUrl} />
+            </div>
           </section>
         </section>
         {mobile && <MobileNav handleMobile={handleMobile} />}
