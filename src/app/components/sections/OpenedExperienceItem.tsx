@@ -1,7 +1,7 @@
 "use client";
 
 import { MdClose } from "react-icons/md";
-import { ProjectsProps } from "../../page";
+import { ProjectsProps } from "../../(main)/page";
 import { CiGlobe } from "react-icons/ci";
 import Image from "next/image";
 import { personalProjects } from "../../../../data/projects";

@@ -3,7 +3,7 @@
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectsProps } from "../../page";
+import { ProjectsProps } from "../../(main)/page";
 import { GrLinkNext } from "react-icons/gr";
 import { FaArrowDown } from "react-icons/fa6";
 import { useLanguage } from "../../contexts/languageContext";

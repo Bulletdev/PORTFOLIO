@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import ProfileCard from "./components/sections/ProfileCard";
-import Footer from "./components/Footer";
-import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
-import ProgrammingLanguages from "./components/sections/ProgrammingLanguages";
-import ExperienceItem from "./components/sections/ExperienceItems";
-import OpenedExperienceItem from "./components/sections/OpenedExperienceItem";
-import InteractiveTutorial from "./components/InteractiveTutorial";
+import ProfileCard from "../components/sections/ProfileCard";
+import Footer from "../components/Footer";
+import Skills from "../components/sections/Skills";
+import Projects from "../components/sections/Projects";
+import ProgrammingLanguages from "../components/sections/ProgrammingLanguages";
+import ExperienceItem from "../components/sections/ExperienceItems";
+import OpenedExperienceItem from "../components/sections/OpenedExperienceItem";
+import InteractiveTutorial from "../components/InteractiveTutorial";
 
 export interface ProjectsProps {
   onSetExperienceSection?: () => void;

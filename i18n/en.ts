@@ -65,7 +65,7 @@ export const en: Translations = {
         companyName: "Accenture",
         positionTitle: "Mid-Level Backend Developer",
         date: "March 2020 - March 2022",
-        tech: ["Java", "Spring Boot", "Ruby on Rails", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
+        tech: ["Java", "Spring Boot", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
         trivia: "👥 Reviewed code from 15+ junior developers and helped onboard 3 new team members. Teaching others is how you truly solidify your own knowledge.",
         description: [
           "Developed microservices with Spring Boot",
@@ -94,7 +94,7 @@ export const en: Translations = {
         companyName: "Pirelli Pneus",
         positionTitle: "Junior Developer",
         date: "October 2017 - October 2018",
-        tech: ["Java", "SQL Server", "Crystal Reports", "VBA", "Excel"],
+        tech: ["Ruby on Rails", "PHP", "SQL Server", "Crystal Reports", "VBA", "Excel"],
         trivia: "🏎️ Pirelli supplies tires to Formula 1. Some of the production dashboards built here tracked batches that ended up on F1 cars.",
         description: [
           "Development of internal systems for production control",
@@ -253,4 +253,15 @@ export const en: Translations = {
     closeLabel: "Close tutorial",
   },
   cvUrl: "https://drive.google.com/file/d/1c3RBz8NW2kNax8K6eTdYflAXQxviuMi3/view?usp=sharing",
+  links: {
+    tagline: "Backend Developer • Java • Golang • Rails",
+    portfolio: "Portfolio",
+    blog: "Blog",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+    instagram: "Instagram",
+    resume: "Resume",
+    whatsapp: "WhatsApp",
+    email: "Email",
+  },
 };

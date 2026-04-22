@@ -62,4 +62,15 @@ export type Translations = {
     closeLabel: string;
   };
   cvUrl: string;
+  links: {
+    tagline: string;
+    portfolio: string;
+    blog: string;
+    linkedin: string;
+    github: string;
+    instagram: string;
+    resume: string;
+    whatsapp: string;
+    email: string;
+  };
 };

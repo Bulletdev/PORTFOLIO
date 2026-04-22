@@ -66,7 +66,7 @@ export const pt: Translations = {
         companyName: "Accenture",
         positionTitle: "Desenvolvedor Backend Pleno",
         date: "Março de 2020 - Março de 2022",
-        tech: ["Java", "Spring Boot", "Ruby on Rails", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
+        tech: ["Java", "Spring Boot", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
         trivia: "👥 Fiz code review de mais de 15 devs júnior e ajudei no onboarding de 3 novos membros. Ensinar é a melhor forma de consolidar o próprio conhecimento.",
         description: [
           "Desenvolvimento de microserviços com Spring Boot",
@@ -95,7 +95,7 @@ export const pt: Translations = {
         companyName: "Pirelli Pneus",
         positionTitle: "Desenvolvedor Júnior",
         date: "Outubro de 2017 - Outubro de 2018",
-        tech: ["Java", "SQL Server", "Crystal Reports", "VBA", "Excel"],
+        tech: ["Ruby on Rails", "PHP", "SQL Server", "Crystal Reports", "VBA", "Excel"],
         trivia: "🏎️ A Pirelli fornece pneus para a Fórmula 1. Alguns dashboards de produção criados aqui rastreavam lotes que foram parar em carros de F1.",
         description: [
           "Desenvolvimento de sistemas internos para controle de produção",
@@ -254,4 +254,15 @@ export const pt: Translations = {
     closeLabel: "Fechar tutorial",
   },
   cvUrl: "https://drive.google.com/file/d/1S_sDiEP10sRpODHkyTnPWdD8c2FUJbME/view?usp=sharing",
+  links: {
+    tagline: "Desenvolvedor Backend • Java • Golang • Rails",
+    portfolio: "Portfólio",
+    blog: "Blog",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+    instagram: "Instagram",
+    resume: "Currículo",
+    whatsapp: "WhatsApp",
+    email: "E-mail",
+  },
 };

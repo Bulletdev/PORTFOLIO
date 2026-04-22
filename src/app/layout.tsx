@@ -2,7 +2,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
 import { GeneralProvider } from "./contexts/generalContext";
 import { LanguageProvider } from "./contexts/languageContext";
 
@@ -45,7 +44,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <LanguageProvider>
           <GeneralProvider>
-            <Navigation />
             {children}
           </GeneralProvider>
         </LanguageProvider>
