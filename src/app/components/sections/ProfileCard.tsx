@@ -57,7 +57,7 @@ function Location() {
 
 function Booking() {
   const { t } = useLanguage();
-  const email = "contato@michaelbullet.com";
+  const email = "michael@prostaff.gg";
   const phoneNum = "75983360359";
   const whatsapp = "wa.me/5575983360359";
 

@@ -100,7 +100,7 @@ export default function LinksPage() {
       icon: <FaWhatsapp />,
     },
     {
-      href: "mailto:contato@michaelbullet.com",
+      href: "mailto:michael@prostaff.gg",
       label: t.links.email,
       icon: <MdOutlineEmail />,
     },
