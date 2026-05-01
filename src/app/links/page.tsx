@@ -80,7 +80,7 @@ export default function LinksPage() {
       icon: <FaLinkedin />,
     },
     {
-      href: "https://www.bulletonrails.me/",
+      href: "https://www.rubytank.com/",
       label: t.links.blog,
       icon: <FaRss />,
     },
