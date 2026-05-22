@@ -30,7 +30,7 @@ export const pt: Translations = {
   },
   experience: {
     sectionTitle: "Experiência Profissional",
-    yearsExp: "+4 anos de experiência",
+    yearsExp: "+7 anos de experiência",
     showDescriptions: "Mostrar descrições",
     hideDescriptions: "Ocultar descrições",
     shuffle: "Embaralhar",
@@ -38,7 +38,7 @@ export const pt: Translations = {
     jobs: [
       {
         companyName: "Plathanus Software & Design",
-        positionTitle: "Mid Level Software Engineer",
+        positionTitle: "Mid Level/Senior Software Engineer",
         date: "Dezembro de 2025 - Presente",
         tech: ["Ruby on Rails", "Sidekiq", "Redis", "PostgreSQL", "Open Finance", "mTLS", "OAuth 2.0", "XML", "Docker"],
         trivia: "🏦 A integração PIX aqui processa transações financeiras reais - cada QR code escaneado por um cliente passa por esse código.",
@@ -198,6 +198,7 @@ export const pt: Translations = {
   },
   openedProjects: {
     title: "Projetos",
+    viewOnGithub: "Ver no GitHub",
     subtitle: (count) => `${count} projetos concluídos • Atualizado em Outubro de 2025`,
     items: [
       {

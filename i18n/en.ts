@@ -29,7 +29,7 @@ export const en: Translations = {
   },
   experience: {
     sectionTitle: "Professional Experience",
-    yearsExp: "+4 years of experience",
+    yearsExp: "+7 years of experience",
     showDescriptions: "Show descriptions",
     hideDescriptions: "Hide descriptions",
     shuffle: "Shuffle",
@@ -37,7 +37,7 @@ export const en: Translations = {
     jobs: [
       {
         companyName: "Plathanus Software & Design",
-        positionTitle: "Mid Level Software Engineer",
+        positionTitle: "Mid Level/Senior Software Engineer",
         date: "December 2025 - Present",
         tech: ["Ruby on Rails", "Sidekiq", "Redis", "PostgreSQL", "Open Finance", "mTLS", "OAuth 2.0", "XML", "Docker"],
         trivia: "🏦 The PIX integration here handles real financial transactions - every QR code scanned by a real customer runs through this code.",
@@ -51,7 +51,7 @@ export const en: Translations = {
       },
       {
         companyName: "Effecti",
-        positionTitle: "Full Stack Developer",
+        positionTitle: "Full Stack Mid-Level Developer",
         date: "January 2025 - December 2025",
         tech: ["Java", "Golang", "AWS Lambda", "SQS", "API Gateway", "Sidekiq", "Redis", "PostgreSQL"],
         trivia: "⚡ The scrapers ran 24/7 and in one year processed over 500 million public tender records. That's more documents than most government archives.",
@@ -197,6 +197,7 @@ export const en: Translations = {
   },
   openedProjects: {
     title: "Projects",
+    viewOnGithub: "View on GitHub",
     subtitle: (count) => `${count} completed projects • Updated October 2025`,
     items: [
       {

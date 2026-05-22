@@ -84,7 +84,7 @@ export default function OpenedExperienceItem({
                   </div>
                   <div className="flex items-center gap-2 mt-1 text-xs text-spotify-grey group-hover:text-spotify-green transition-colors">
                     <FaGithub className="text-sm" />
-                    <span>Ver no GitHub</span>
+                    <span>{t.openedProjects.viewOnGithub}</span>
                   </div>
                 </div>
               </div>
