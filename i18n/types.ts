@@ -53,6 +53,7 @@ export type Translations = {
   openedProjects: {
     title: string;
     subtitle: (count: number) => string;
+    viewOnGithub: string;
     items: OpenedProjectItem[];
   };
   tutorial: {
