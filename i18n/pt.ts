@@ -38,7 +38,7 @@ export const pt: Translations = {
     jobs: [
       {
         companyName: "Plathanus Software & Design",
-        positionTitle: "Mid Level/Senior Software Engineer",
+        positionTitle: "Engenheiro de Software Pleno/Sênior",
         date: "Dezembro de 2025 - Presente",
         tech: ["Ruby on Rails", "Sidekiq", "Redis", "PostgreSQL", "Open Finance", "mTLS", "OAuth 2.0", "XML", "Docker"],
         trivia: "🏦 A integração PIX aqui processa transações financeiras reais - cada QR code escaneado por um cliente passa por esse código.",
