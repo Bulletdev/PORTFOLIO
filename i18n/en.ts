@@ -40,7 +40,7 @@ export const en: Translations = {
         positionTitle: "Mid-Level/Senior Software Engineer",
         date: "December 2025 - Present",
         tech: ["Ruby on Rails", "Sidekiq", "Redis", "PostgreSQL", "Open Finance", "mTLS", "OAuth 2.0", "XML", "Docker"],
-        trivia: "🏦 The PIX integration here handles real financial transactions - every QR code scanned by a real customer runs through this code.",
+        trivia: "The PIX integration here handles real financial transactions - every QR code scanned by a real customer runs through this code.",
         description: [
           "Designed and implemented full Recurring Automatic PIX integration with Itaú's Open Finance API, including mTLS/OAuth 2.0 authentication, QR code generation, webhook processing, automatic retries, and financial reconciliation.",
           "Built from scratch an NFSe issuance middleware via the National Sefin API, with XML format conversion (ABRASF → DPS), digital signing with A1 certificate, and async processing pipeline via Sidekiq.",
@@ -54,7 +54,7 @@ export const en: Translations = {
         positionTitle: "Full Stack Mid-Level Developer",
         date: "January 2025 - December 2025",
         tech: ["Java", "Golang", "AWS Lambda", "SQS", "API Gateway", "Sidekiq", "Redis", "PostgreSQL"],
-        trivia: "⚡ The scrapers ran 24/7 and in one year processed over 500 million public tender records. That's more documents than most government archives.",
+        trivia: "The scrapers ran 24/7 and in one year processed over 500 million public tender records. That's more documents than most government archives.",
         description: [
           "Developed and optimized microservices in Ruby on Rails and Java for public tender scraping and automation, processing >1.5M records/day, reducing average extraction time by 42% (from ~4s to <2.4s per page).",
           "Led migration of 4 critical services from Java monolith to Golang + Serverless (Lambda + SQS + API Gateway), cutting p95 latency by 78% (1.4s → 310ms) and reducing monthly infrastructure costs by 40%.",
@@ -66,7 +66,7 @@ export const en: Translations = {
         positionTitle: "Mid-Level Backend Developer",
         date: "March 2020 - March 2022",
         tech: ["Java", "Spring Boot", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
-        trivia: "👥 Reviewed code from 15+ junior developers and helped onboard 3 new team members. Teaching others is how you truly solidify your own knowledge.",
+        trivia: "Reviewed code from 15+ junior developers and helped onboard 3 new team members. Teaching others is how you truly solidify your own knowledge.",
         description: [
           "Developed microservices with Spring Boot",
           "Integration with third-party APIs and legacy Ruby on Rails systems",
@@ -81,7 +81,7 @@ export const en: Translations = {
         positionTitle: "Junior Backend Developer",
         date: "February 2019 - March 2020",
         tech: ["Java", "Spring Boot", "SQL", "REST APIs", "Git", "Jira"],
-        trivia: "🚀 This was the first professional job. The very first commit pushed here marked the start of the journey from zero to full-stack.",
+        trivia: "This was the first professional job. The very first commit pushed here marked the start of the journey from zero to full-stack.",
         description: [
           "Development of features in enterprise systems",
           "Bug fixing and maintenance of Java applications",
@@ -95,7 +95,7 @@ export const en: Translations = {
         positionTitle: "Junior Developer",
         date: "October 2017 - October 2018",
         tech: ["Ruby on Rails", "PHP", "SQL Server", "Crystal Reports", "VBA", "Excel"],
-        trivia: "🏎️ Pirelli supplies tires to Formula 1. Some of the production dashboards built here tracked batches that ended up on F1 cars.",
+        trivia: "Pirelli supplies tires to Formula 1. Some of the production dashboards built here tracked batches that ended up on F1 cars.",
         description: [
           "Development of internal systems for production control",
           "Creation of reports and dashboards",

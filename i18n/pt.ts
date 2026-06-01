@@ -41,7 +41,7 @@ export const pt: Translations = {
         positionTitle: "Engenheiro de Software Pleno/Sênior",
         date: "Dezembro de 2025 - Presente",
         tech: ["Ruby on Rails", "Sidekiq", "Redis", "PostgreSQL", "Open Finance", "mTLS", "OAuth 2.0", "XML", "Docker"],
-        trivia: "🏦 A integração PIX aqui processa transações financeiras reais - cada QR code escaneado por um cliente passa por esse código.",
+        trivia: "A integração PIX aqui processa transações financeiras reais - cada QR code escaneado por um cliente passa por esse código.",
         description: [
           "Projetei e implementei integração completa de PIX Automático Recorrente com a Open Finance API do Itaú, incluindo autenticação mTLS/OAuth 2.0, geração de QR codes, processamento de webhooks, retentativas automáticas e conciliação financeira.",
           "Construí do zero um middleware de emissão de NFSe via API Sefin Nacional (Receita Federal), com conversão de formato XML (ABRASF → DPS), assinatura digital com certificado A1 e pipeline assíncrono de processamento via Sidekiq.",
@@ -55,7 +55,7 @@ export const pt: Translations = {
         positionTitle: "Desenvolvedor Full Stack Pleno",
         date: "Janeiro de 2025 - Dezembro de 2025",
         tech: ["Java", "Golang", "AWS Lambda", "SQS", "API Gateway", "Sidekiq", "Redis", "PostgreSQL"],
-        trivia: "⚡ Os scrapers rodavam 24/7 e em um ano processaram mais de 500 milhões de registros de licitações. Mais documentos do que a maioria dos arquivos governamentais.",
+        trivia: "Os scrapers rodavam 24/7 e em um ano processaram mais de 500 milhões de registros de licitações. Mais documentos do que a maioria dos arquivos governamentais.",
         description: [
           "Desenvolvi e otimizei microsserviços em Ruby on Rails e Java para scraping e automação de licitações, processando >1.5 milhão de registros/dia, reduzindo tempo médio de extração em 42% (de ~4s para <2.4s por página).",
           "Liderei migração de 4 serviços críticos de Java monólito para Golang + Serverless (Lambda + SQS + API Gateway), cortando latência p95 em 78% (1.4s → 310ms) e reduzindo custo mensal de infraestrutura em 40%.",
@@ -67,7 +67,7 @@ export const pt: Translations = {
         positionTitle: "Desenvolvedor Backend Pleno",
         date: "Março de 2020 - Março de 2022",
         tech: ["Java", "Spring Boot", "JUnit", "Mockito", "REST APIs", "SOAP", "Oracle DB"],
-        trivia: "👥 Fiz code review de mais de 15 devs júnior e ajudei no onboarding de 3 novos membros. Ensinar é a melhor forma de consolidar o próprio conhecimento.",
+        trivia: "Fiz code review de mais de 15 devs júnior e ajudei no onboarding de 3 novos membros. Ensinar é a melhor forma de consolidar o próprio conhecimento.",
         description: [
           "Desenvolvimento de microserviços com Spring Boot",
           "Integração com APIs de terceiros e sistemas legados Ruby on Rails",
@@ -82,7 +82,7 @@ export const pt: Translations = {
         positionTitle: "Desenvolvedor Backend Júnior",
         date: "Fevereiro de 2019 - Março de 2020",
         tech: ["Java", "Spring Boot", "SQL", "REST APIs", "Git", "Jira"],
-        trivia: "🚀 Primeiro emprego como dev. O primeiro commit profissional foi aqui - o começo da jornada do zero ao full-stack.",
+        trivia: "Primeiro emprego como dev. O primeiro commit profissional foi aqui - o começo da jornada do zero ao full-stack.",
         description: [
           "Desenvolvimento de funcionalidades em sistemas enterprise",
           "Manutenção e correção de bugs em aplicações Java",
@@ -96,7 +96,7 @@ export const pt: Translations = {
         positionTitle: "Desenvolvedor Júnior",
         date: "Outubro de 2017 - Outubro de 2018",
         tech: ["Ruby on Rails", "PHP", "SQL Server", "Crystal Reports", "VBA", "Excel"],
-        trivia: "🏎️ A Pirelli fornece pneus para a Fórmula 1. Alguns dashboards de produção criados aqui rastreavam lotes que foram parar em carros de F1.",
+        trivia: "A Pirelli fornece pneus para a Fórmula 1. Alguns dashboards de produção criados aqui rastreavam lotes que foram parar em carros de F1.",
         description: [
           "Desenvolvimento de sistemas internos para controle de produção",
           "Criação de relatórios e dashboards",
