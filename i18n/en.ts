@@ -103,6 +103,20 @@ export const en: Translations = {
           "Technical documentation of systems",
         ],
       },
+      {
+        companyName: "Gothenburg - Volvo Trucks, Buses and Construction Equipment Dealership",
+        positionTitle: "Intern",
+        date: "February 2015 - August 2016",
+        tech: ["SQL Server", "Java", "GCP", "AWS", ".NET", "Web API", "JUnit", "Mockito", "Jest", "CI/CD", "Kanban", "Excel VBA"],
+        trivia: "Contributed to achieving gold/platinum classification in the 100% VOLVO process, earning recognition from headquarters in Sweden and a formal letter of recommendation.",
+        description: [
+          "Development of solutions for stock recording and organisation, implementing systems that optimised control and reduced operational errors.",
+          "Creation and maintenance of administrative tools, integrating reception, invoicing and data management routines to improve the efficiency of internal processes.",
+          "Automation of tasks in Microsoft Excel and other Office tools, using macros and scripts to generate reports and performance analyses.",
+          "Collaboration on internal and external audits, developing monitoring systems to ensure compliance and the achievement of strategic goals.",
+          "Member of CIPA (Internal Accident Prevention Commission).",
+        ],
+      },
     ],
   },
   projects: {

@@ -104,6 +104,20 @@ export const pt: Translations = {
           "Documentação técnica de sistemas",
         ],
       },
+      {
+        companyName: "Gotemburgo - Concessionária Volvo Caminhões, Ônibus e Equipamentos de Construção",
+        positionTitle: "Estagiário",
+        date: "Fevereiro de 2015 - Agosto de 2016",
+        tech: ["SQL Server", "Java", "GCP", "AWS", ".NET", "Web API", "JUnit", "Mockito", "Jest", "CI/CD", "Kanban", "Excel VBA"],
+        trivia: "Contribuí para a conquista da classificação ouro/platina no processo 100% VOLVO, com reconhecimento da sede na Suécia e carta de recomendação formal.",
+        description: [
+          "Desenvolvimento de soluções para registro e organização de estoque, implementando sistemas que otimizaram o controle e reduziram erros operacionais.",
+          "Criação e manutenção de ferramentas administrativas, integrando rotinas de recepção, faturamento e gestão de dados para melhorar a eficiência dos processos internos.",
+          "Automação de tarefas no Microsoft Excel e outras ferramentas Office, utilizando macros e scripts para geração de relatórios e análises de desempenho.",
+          "Colaboração em auditorias internas e externas, desenvolvendo sistemas de monitoramento para garantir conformidade e o atingimento de metas estratégicas.",
+          "Membro da CIPA (Comissão Interna de Prevenção de Acidentes).",
+        ],
+      },
     ],
   },
   projects: {
