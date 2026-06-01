@@ -105,10 +105,10 @@ export const pt: Translations = {
         ],
       },
       {
-        companyName: "Gotemburgo - Concessionária Volvo Caminhões, Ônibus e Equipamentos de Construção",
+        companyName: "Gotemburgo - Concessionária Volvo",
         positionTitle: "Estagiário",
         date: "Fevereiro de 2015 - Agosto de 2016",
-        tech: ["SQL Server", "Java", "GCP", "AWS", ".NET", "Web API", "JUnit", "Mockito", "Jest", "CI/CD", "Kanban", "Excel VBA"],
+        tech: ["SQL Server", "Java", "JUnit", "Mockito", "Jest", "Web API"],
         trivia: "Contribuí para a conquista da classificação ouro/platina no processo 100% VOLVO, com reconhecimento da sede na Suécia e carta de recomendação formal.",
         description: [
           "Desenvolvimento de soluções para registro e organização de estoque, implementando sistemas que otimizaram o controle e reduziram erros operacionais.",
