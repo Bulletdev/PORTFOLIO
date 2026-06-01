@@ -253,7 +253,7 @@ export const en: Translations = {
     explore: "Also explore projects and technologies",
     closeLabel: "Close tutorial",
   },
-  cvUrl: "https://drive.google.com/file/d/1c3RBz8NW2kNax8K6eTdYflAXQxviuMi3/view?usp=sharing",
+  cvUrl: "https://drive.google.com/file/d/18H7pqTMjzGJY1LrAeYyDf_0jKI0uPemU/view",
   links: {
     tagline: "Backend Developer • Java • Golang • Rails",
     portfolio: "Portfolio",
