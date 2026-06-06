@@ -138,7 +138,7 @@ export default function LinksPage() {
             <div className="absolute inset-0 rounded-full bg-spotify-green/25 blur-2xl scale-125" />
             <div className="relative rounded-full p-[2px] bg-gradient-to-br from-spotify-green/60 to-transparent">
               <Image
-                src="/Michael.jpeg"
+                src="/Michael3.png"
                 alt="Michael Bullet"
                 width={96}
                 height={96}

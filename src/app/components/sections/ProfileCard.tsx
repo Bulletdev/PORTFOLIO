@@ -22,7 +22,7 @@ export default function ProfileCard() {
       <div className="flex flex-col gap-4 p-4">
         <BackgroundGradient containerClassName="rounded-[40px] place-self-center">
           <Image
-            src="/Michael.jpeg"
+            src="/Michael3.png"
             alt="Michael Douglas"
             width={350}
             height={350}
