@@ -282,7 +282,7 @@ export const pt: Translations = {
   },
   cvUrl: "https://drive.google.com/file/d/1WZX2Oo753y_65rwlVq2lc9tv_t6MhIiX/view",
   links: {
-    tagline: "Engenheiro de Software • Elixir • Ruby • Fintech",
+    tagline: "Engenheiro de Software • Elixir • Ruby • Go",
     portfolio: "Portfólio",
     blog: "Blog",
     linkedin: "LinkedIn",
