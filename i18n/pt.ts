@@ -39,10 +39,10 @@ export const pt: Translations = {
         companyName: "Swap Financial",
         positionTitle: "Engenheiro de Software II",
         date: "Julho de 2026 - Presente",
-        tech: ["Elixir", "OTP", "Phoenix", "PostgreSQL", "Kafka", "Docker", "AWS"],
+        tech: ["Elixir", "OTP", "Phoenix", "Kotlin", "PostgreSQL", "Kafka", "Docker", "AWS"],
         trivia: "A Swap processa transações de mais de 150 ecossistemas B2B no Brasil — cada pagamento corporativo que passa pela plataforma é uma responsabilidade real de engenharia.",
         description: [
-          "Desenvolvimento e evolução de serviços backend com Elixir/OTP e Phoenix em plataforma de Banking as a Service B2B.",
+          "Desenvolvimento e evolução de serviços backend com Elixir/OTP, Phoenix e Kotlin em plataforma de Banking as a Service B2B.",
           "Construção de APIs e integrações entre sistemas financeiros com foco em performance, confiabilidade e conformidade regulatória.",
           "Trabalho com processamento assíncrono, mensageria via Kafka e arquitetura orientada a eventos.",
           "Participação nas decisões técnicas da plataforma, garantindo qualidade, escalabilidade e boas práticas de engenharia.",

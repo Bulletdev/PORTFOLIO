@@ -39,10 +39,10 @@ export const en: Translations = {
         companyName: "Swap Financial",
         positionTitle: "Software Engineer II",
         date: "July 2026 - Present",
-        tech: ["Elixir", "OTP", "Phoenix", "PostgreSQL", "Kafka", "Docker", "AWS"],
+        tech: ["Elixir", "OTP", "Phoenix", "Kotlin", "PostgreSQL", "Kafka", "Docker", "AWS"],
         trivia: "Swap processes transactions for over 150 B2B ecosystems across Brazil — every corporate payment that flows through the platform is real engineering responsibility.",
         description: [
-          "Developing and evolving backend services with Elixir/OTP and Phoenix on a B2B Banking as a Service platform.",
+          "Developing and evolving backend services with Elixir/OTP, Phoenix, and Kotlin on a B2B Banking as a Service platform.",
           "Building APIs and integrations between financial systems with a focus on performance, reliability, and regulatory compliance.",
           "Working with async processing, event-driven messaging via Kafka, and distributed system architecture.",
           "Participating in technical platform decisions, ensuring quality, scalability, and engineering best practices.",
