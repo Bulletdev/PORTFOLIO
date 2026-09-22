@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTelegram,
+  FaXTwitter,
   FaCode,
   FaRss,
 } from "react-icons/fa6";
@@ -88,6 +89,11 @@ export default function LinksPage() {
       href: "https://www.instagram.com/bullet.jar/",
       label: t.links.instagram,
       icon: <FaInstagram />,
+    },
+    {
+      href: "https://x.com/JavaAdvocate",
+      label: t.links.x,
+      icon: <FaXTwitter />,
     },
     {
       href: "https://t.me/PwnedByBullet",

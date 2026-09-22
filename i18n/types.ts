@@ -70,6 +70,7 @@ export type Translations = {
     linkedin: string;
     github: string;
     instagram: string;
+    x: string;
     telegram: string;
     resume: string;
     email: string;

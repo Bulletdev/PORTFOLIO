@@ -286,6 +286,7 @@ export const en: Translations = {
     linkedin: "LinkedIn",
     github: "GitHub",
     instagram: "Instagram",
+    x: "X (Twitter)",
     telegram: "Telegram",
     resume: "Resume",
     email: "Email",
