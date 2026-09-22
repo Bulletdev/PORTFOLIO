@@ -146,4 +146,51 @@ const languageItems: {
       />
     ),
   },
+  // Elixir/Phoenix
+  {
+    name: "Elixir",
+    component: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original.svg"
+        width={50}
+        height={50}
+        alt="Elixir"
+      />
+    ),
+  },
+  {
+    name: "Phoenix",
+    component: (
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phoenix/phoenix-original.svg"
+        width={50}
+        height={50}
+        alt="Phoenix"
+      />
+    ),
+  },
+  {
+    name: "Hotwire",
+    component: (
+      <Image
+        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/hotwire.svg"
+        width={50}
+        height={50}
+        alt="Hotwire"
+        style={{ filter: "invert(1)" }}
+      />
+    ),
+  },
+  {
+    name: "RuboCop",
+    component: (
+      <Image
+        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/rubocop.svg"
+        width={50}
+        height={50}
+        alt="RuboCop"
+        style={{ filter: "invert(1)" }}
+      />
+    ),
+  },
 ];
