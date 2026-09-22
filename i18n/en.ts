@@ -2,6 +2,7 @@ import type { Translations } from "./types";
 
 export const en: Translations = {
   nav: {
+    telegram: "Telegram",
     resume: "Resume",
     toggleLang: "PT",
   },
@@ -21,7 +22,7 @@ export const en: Translations = {
     copyEmail: "Copy Email",
     copiedNumber: "Phone number copied to clipboard!",
     copiedEmail: "Email copied to clipboard!",
-    openWhatsapp: "Open WhatsApp",
+    openTelegram: "Open Telegram",
     copyNumberTitle: "Copy number",
     copyEmailTitle: "Copy email",
   },
@@ -286,8 +287,8 @@ export const en: Translations = {
     linkedin: "LinkedIn",
     github: "GitHub",
     instagram: "Instagram",
+    telegram: "Telegram",
     resume: "Resume",
-    whatsapp: "WhatsApp",
     email: "Email",
   },
 };

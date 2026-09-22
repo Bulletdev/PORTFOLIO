@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaWhatsapp,
+  FaTelegram,
   FaCode,
   FaRss,
 } from "react-icons/fa6";
@@ -90,17 +90,17 @@ export default function LinksPage() {
       icon: <FaInstagram />,
     },
     {
+      href: "https://t.me/PwnedByBullet",
+      label: t.links.telegram,
+      icon: <FaTelegram />,
+    },
+    {
       href: t.cvUrl,
       label: t.links.resume,
       icon: <IoCloudDownloadOutline />,
     },
     {
-      href: "https://wa.me/5575983360359",
-      label: t.links.whatsapp,
-      icon: <FaWhatsapp />,
-    },
-    {
-      href: "mailto:michael@prostaff.gg",
+      href: "mailto:michael@effront.gg",
       label: t.links.email,
       icon: <MdOutlineEmail />,
     },

@@ -22,6 +22,7 @@ export type OpenedProjectItem = {
 
 export type Translations = {
   nav: {
+    telegram: string;
     resume: string;
     toggleLang: string;
   };
@@ -32,7 +33,7 @@ export type Translations = {
     copyEmail: string;
     copiedNumber: string;
     copiedEmail: string;
-    openWhatsapp: string;
+    openTelegram: string;
     copyNumberTitle: string;
     copyEmailTitle: string;
   };
@@ -70,8 +71,8 @@ export type Translations = {
     linkedin: string;
     github: string;
     instagram: string;
+    telegram: string;
     resume: string;
-    whatsapp: string;
     email: string;
   };
 };

@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaRegCopy, FaCheck } from "react-icons/fa6";
+import { FaRegCopy, FaCheck, FaTelegram } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { BackgroundGradient } from "../ui/background-gradient";
-import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { useLanguage } from "../../contexts/languageContext";
 import type { BioSegment } from "../../../../i18n/types";
@@ -59,7 +58,7 @@ function Booking() {
   const { t } = useLanguage();
   const email = "michael@prostaff.gg";
   const phoneNum = "75983360359";
-  const whatsapp = "wa.me/5575983360359";
+  const telegram = "t.me/PwnedByBullet";
 
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -78,19 +77,19 @@ function Booking() {
     });
   };
 
-  const handleOpenWhatsapp = () => {
-    window.open(`https://${whatsapp}`, "_blank");
+  const handleOpenTelegram = () => {
+    window.open(`https://${telegram}`, "_blank");
   };
 
   return (
     <div className="px-4 flex flex-col gap-2">
       <button
         type="button"
-        onClick={handleOpenWhatsapp}
+        onClick={handleOpenTelegram}
         className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-spotify-green hover:bg-spotify-dark-green text-black font-bold text-sm transition-all duration-200 hover:scale-[1.02]"
       >
-        <FaWhatsapp className="text-base" />
-        WhatsApp
+        <FaTelegram className="text-base" />
+        Telegram
       </button>
 
       <div className="flex gap-2">
