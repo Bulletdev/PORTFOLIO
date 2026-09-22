@@ -22,19 +22,18 @@ export type OpenedProjectItem = {
 
 export type Translations = {
   nav: {
-    telegram: string;
     resume: string;
     toggleLang: string;
   };
   profile: {
     subtitle: string;
     bioSegments: BioSegment[];
-    copyNumber: string;
+    copyTelegram: string;
     copyEmail: string;
-    copiedNumber: string;
+    copiedTelegram: string;
     copiedEmail: string;
     openTelegram: string;
-    copyNumberTitle: string;
+    copyTelegramTitle: string;
     copyEmailTitle: string;
   };
   experience: {

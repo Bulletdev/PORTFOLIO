@@ -4,7 +4,6 @@ import SocialLinks from "./SocialLinks";
 import NavButton from "./NavButton";
 import { useLanguage } from "../contexts/languageContext";
 import { PiLineVerticalThin } from "react-icons/pi";
-import { IoCloudDownloadOutline } from "react-icons/io5";
 
 interface MobileNavProps {
   handleMobile: () => void;
@@ -44,12 +43,7 @@ export default function MobileNav({ handleMobile }: MobileNavProps) {
         </button>
       </div>
       <div className="flex flex-row flex-wrap gap-2 px-3 pb-3 items-center justify-center">
-        <NavButton name={t.nav.telegram} href="https://t.me/PwnedByBullet" />
-        <NavButton
-          name={t.nav.resume}
-          href={t.cvUrl}
-          icon={<IoCloudDownloadOutline className="text-xl" />}
-        />
+        <NavButton name={t.nav.resume} href={t.cvUrl} />
       </div>
     </nav>
   );

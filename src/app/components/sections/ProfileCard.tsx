@@ -57,10 +57,10 @@ function Location() {
 function Booking() {
   const { t } = useLanguage();
   const email = "michael@prostaff.gg";
-  const phoneNum = "75983360359";
+  const telegramHandle = "@PwnedByBullet";
   const telegram = "t.me/PwnedByBullet";
 
-  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedTelegram, setCopiedTelegram] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
@@ -70,10 +70,10 @@ function Booking() {
     });
   };
 
-  const handleCopyNumber = () => {
-    navigator.clipboard.writeText(phoneNum).then(() => {
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 2000);
+  const handleCopyTelegram = () => {
+    navigator.clipboard.writeText(telegramHandle).then(() => {
+      setCopiedTelegram(true);
+      setTimeout(() => setCopiedTelegram(false), 2000);
     });
   };
 
@@ -95,11 +95,11 @@ function Booking() {
       <div className="flex gap-2">
         <button
           type="button"
-          onClick={handleCopyNumber}
+          onClick={handleCopyTelegram}
           className="flex items-center justify-center gap-1.5 flex-1 py-2.5 rounded-xl border border-white/15 hover:border-spotify-green/50 hover:bg-white/5 text-spotify-light-gray hover:text-white text-xs font-semibold transition-all duration-200"
         >
-          {copiedPhone ? <FaCheck className="text-spotify-green" /> : <FaRegCopy />}
-          {copiedPhone ? "Copied!" : t.profile.copyNumber}
+          {copiedTelegram ? <FaCheck className="text-spotify-green" /> : <FaRegCopy />}
+          {copiedTelegram ? "Copied!" : t.profile.copyTelegram}
         </button>
 
         <button

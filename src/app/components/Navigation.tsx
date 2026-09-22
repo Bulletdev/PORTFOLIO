@@ -7,7 +7,6 @@ import { ReactNode } from "react";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
-import { IoCloudDownloadOutline } from "react-icons/io5";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 import MobileNav from "./MobileNav";
@@ -59,13 +58,8 @@ export default function Navigation(): ReactNode {
             >
               {t.nav.toggleLang}
             </button>
-            <div className="max-md:hidden flex items-center gap-2">
-              <NavButton name={t.nav.telegram} href="https://t.me/PwnedByBullet" />
-              <NavButton
-                name={t.nav.resume}
-                href={t.cvUrl}
-                icon={<IoCloudDownloadOutline className="text-xl" />}
-              />
+            <div className="max-md:hidden">
+              <NavButton name={t.nav.resume} href={t.cvUrl} />
             </div>
           </section>
         </section>

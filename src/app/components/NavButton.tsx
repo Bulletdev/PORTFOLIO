@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FaTelegram } from "react-icons/fa6";
+import { IoCloudDownloadOutline } from "react-icons/io5";
 
 interface ButtonProps {
   name: string;
@@ -7,7 +7,7 @@ interface ButtonProps {
   icon?: ReactNode;
 }
 
-export default function NavButton({ name, href, icon = <FaTelegram className="text-xl" /> }: ButtonProps) {
+export default function NavButton({ name, href, icon = <IoCloudDownloadOutline className="text-xl" /> }: ButtonProps) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <button

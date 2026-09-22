@@ -2,7 +2,6 @@ import type { Translations } from "./types";
 
 export const pt: Translations = {
   nav: {
-    telegram: "Telegram",
     resume: "Currículo",
     toggleLang: "EN",
   },
@@ -18,12 +17,12 @@ export const pt: Translations = {
       { text: "tecnologias open-source", highlight: true },
       { text: ".", highlight: false },
     ],
-    copyNumber: "Copiar Número",
+    copyTelegram: "Copiar Telegram",
     copyEmail: "Copiar E-mail",
-    copiedNumber: "Número copiado para a área de transferência!",
+    copiedTelegram: "Usuário do Telegram copiado para a área de transferência!",
     copiedEmail: "E-mail copiado para a área de transferência!",
     openTelegram: "Abrir Telegram",
-    copyNumberTitle: "Copiar número",
+    copyTelegramTitle: "Copiar usuário do Telegram",
     copyEmailTitle: "Copiar e-mail",
   },
   experience: {
