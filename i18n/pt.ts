@@ -35,7 +35,7 @@ export const pt: Translations = {
     jobs: [
       {
         companyName: "Swap Financial",
-        positionTitle: "Engenheiro de Software II",
+        positionTitle: "Software Architect",
         date: "Julho de 2026 - Presente",
         tech: ["Elixir", "OTP", "Phoenix", "Kotlin", "PostgreSQL", "Kafka", "Docker", "AWS"],
         trivia: "A Swap processa transações de mais de 150 ecossistemas B2B no Brasil — cada pagamento corporativo que passa pela plataforma é uma responsabilidade real de engenharia.",
