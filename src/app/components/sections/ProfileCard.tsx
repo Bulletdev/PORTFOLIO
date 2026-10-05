@@ -2,12 +2,24 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaRegCopy, FaCheck, FaTelegram } from "react-icons/fa6";
-import { IoLocationOutline } from "react-icons/io5";
+import { FaRegCopy, FaCheck, FaTelegram, FaBitcoin } from "react-icons/fa6";
+import { SiEthereum, SiSolana } from "react-icons/si";
+import { IoLocationOutline, IoCopyOutline, IoCheckmarkOutline } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { MdOutlineEmail } from "react-icons/md";
 import { useLanguage } from "../../contexts/languageContext";
 import type { BioSegment } from "../../../../i18n/types";
+
+const cryptoItems = [
+  { symbol: "BTC", address: "bc1qtxmxk24qfgxf29rqjs8k4yng3hy2w2ceudeph6", icon: <FaBitcoin />, color: "text-orange-400" },
+  { symbol: "ETH", address: "0x399a7D9A4999616dAae59fC36DFf56Dfc84F5Db9", icon: <SiEthereum />, color: "text-purple-400" },
+  { symbol: "SOL", address: "H4MZ2f8nJWYUMEbZ8X8hTAQnhtvzyJnw1n4r9g2p4Ddq", icon: <SiSolana />, color: "text-teal-400" },
+];
+
+function truncateAddress(addr: string) {
+  return `${addr.slice(0, 8)}...${addr.slice(-6)}`;
+}
 
 export default function ProfileCard() {
   return (
@@ -62,6 +74,13 @@ function Booking() {
 
   const [copiedTelegram, setCopiedTelegram] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedAddress, setCopiedAddress] = useState<string | null>(null);
+
+  function handleCopyAddress(address: string) {
+    navigator.clipboard.writeText(address);
+    setCopiedAddress(address);
+    setTimeout(() => setCopiedAddress(null), 2000);
+  }
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email).then(() => {
@@ -110,6 +129,37 @@ function Booking() {
           {copiedEmail ? <FaCheck className="text-spotify-green" /> : <MdOutlineEmail className="text-base" />}
           {copiedEmail ? "Copied!" : t.profile.copyEmail}
         </button>
+      </div>
+
+      <div className="mt-1 flex flex-col gap-1.5">
+        {cryptoItems.map((item) => {
+          const copied = copiedAddress === item.address;
+          return (
+            <button
+              key={item.symbol}
+              type="button"
+              onClick={() => handleCopyAddress(item.address)}
+              className="flex items-center w-full px-3 py-2 rounded-xl border border-white/10 hover:border-white/25 hover:bg-white/5 transition-all duration-200 group"
+            >
+              <span className={`text-sm flex-shrink-0 ${item.color}`}>{item.icon}</span>
+              <span className="ml-2.5 text-[11px] font-semibold tracking-wide text-spotify-gray group-hover:text-white/70 w-7 flex-shrink-0">{item.symbol}</span>
+              <span className="flex-1 text-left font-mono text-[10px] text-white/35 group-hover:text-white/55 truncate px-1.5">
+                {truncateAddress(item.address)}
+              </span>
+              <AnimatePresence mode="wait">
+                {copied ? (
+                  <motion.span key="check" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="text-spotify-green text-xs flex-shrink-0">
+                    <IoCheckmarkOutline />
+                  </motion.span>
+                ) : (
+                  <motion.span key="copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="text-white/20 group-hover:text-white/50 text-xs flex-shrink-0 transition-colors">
+                    <IoCopyOutline />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
