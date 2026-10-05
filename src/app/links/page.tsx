@@ -121,7 +121,7 @@ export default function LinksPage() {
     {
       href: "https://tryhackme.com/p/BulletOnRails",
       label: "TryHackMe",
-      icon: <Image src="/tryhackme-logo.svg" alt="TryHackMe" width={12} height={12} className="opacity-70 group-hover:opacity-100 transition-opacity" />,
+      icon: <Image src="/tryhackme-logo.svg" alt="TryHackMe" width={12} height={12} className="opacity-80 group-hover:opacity-100 transition-opacity" />,
     },
     {
       href: "https://hbh.sh/user/MitnickBR",
