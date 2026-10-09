@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { RightClickGuard } from "../components/RightClickGuard";
 
 type Line =
   | { kind: "cmd"; text: string }
@@ -106,6 +107,7 @@ export default function WhoAmI() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-start px-4 py-10 font-mono">
+      <RightClickGuard />
       {/* terminal window */}
       <div className="w-full max-w-3xl rounded-xl overflow-hidden border border-white/10 shadow-2xl">
         {/* title bar */}
