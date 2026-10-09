@@ -141,7 +141,7 @@ export default function WhoAmI() {
 
             if (line.kind === "section") {
               return (
-                <div key={i} className="text-[#1db954] whitespace-pre break-all">
+                <div key={i} className="text-[#1db954] whitespace-pre break-all pl-5">
                   {line.text}
                 </div>
               );
