@@ -102,6 +102,18 @@ export const en: Translations = {
         ],
       },
       {
+        companyName: "Effront",
+        positionTitle: "Founder & Lead Engineer",
+        date: "2026 - Present",
+        tech: ["Platform Pentesting", "Game Logic Audit", "Exploit Simulation", "Infra Resilience", "Incident Response", "Zero Trust"],
+        trivia: "Offensive security for gaming platforms is a niche that barely exists — building the site meant understanding the product deeply enough to explain platform pentesting to a tournament director.",
+        description: [
+          "Designed and built the institutional site for Effront, an offensive security company focused on gaming platforms, tournaments, and studios.",
+          "Architected a bilingual (EN/PT) site with next-intl, a capabilities puzzle UI, animated reveal sections, and a Vercel Blob-powered media kit.",
+          "Services offered: platform pentesting, game-logic auditing, exploit simulation, infra resilience testing, training, and incident response.",
+        ],
+      },
+      {
         companyName: "Pirelli Pneus",
         positionTitle: "Junior Developer",
         date: "October 2017 - October 2018",
@@ -134,6 +146,12 @@ export const en: Translations = {
     recentProjects: "Recent Projects",
     otherProjects: "Other Projects",
     items: [
+      {
+        title: "Effront",
+        description:
+          "Offensive security company specialized in gaming platforms, tournaments and studios. Platform pentesting, game-logic auditing, exploit simulation, and infra resilience testing for the layer where cheating and fraud actually happen.",
+        tech: ["Platform Pentesting", "Game Logic Audit", "Exploit Simulation", "Infra Resilience", "Incident Response"],
+      },
       {
         title: "ProStaff API",
         description:
@@ -234,6 +252,11 @@ export const en: Translations = {
         title: "ProStaff Riot Gateway",
         description:
           "Go API gateway centralizing Riot Games API access with rate limiting, dual-layer caching (LRU + Redis), circuit breakers, regional routing, and JWT auth between services.",
+      },
+      {
+        title: "Effront",
+        description:
+          "Institutional site for Effront, an offensive security company for gaming platforms. Bilingual (EN/PT) with next-intl, capabilities puzzle UI, Vercel Blob media kit, services catalog, and careers board.",
       },
       {
         title: "Clube do Java E-commerce",

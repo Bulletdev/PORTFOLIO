@@ -9,6 +9,7 @@ import { FaArrowDown } from "react-icons/fa6";
 import { useLanguage } from "../../contexts/languageContext";
 
 const projectImages: { content: React.ReactNode; href: string }[] = [
+  { href: "https://effront.gg/",                                  content: <Image src="/effront.png"      alt="Effront"                  loading="lazy" width={700} height={300} /> },
   { href: "https://github.com/Bulletdev/prostaff-api",          content: <Image src="/prostaff.png"     alt="ProStaff API"             loading="lazy" width={700} height={300} /> },
   { href: "https://github.com/Bulletdev/prostaff-gateway",      content: <Image src="/gateway.webp"     alt="ProStaff Riot Gateway"    loading="lazy" width={700} height={300} /> },
   { href: "https://clubedojava.com.br/",                         content: <Image src="/cdj.jpg"          alt="Clube do Java E-commerce" loading="lazy" width={700} height={300} /> },

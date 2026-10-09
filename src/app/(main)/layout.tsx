@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import ConsoleEgg from "../components/ConsoleEgg";
 
 export default function MainLayout({
   children,
@@ -7,6 +8,7 @@ export default function MainLayout({
 }) {
   return (
     <>
+      <ConsoleEgg />
       <Navigation />
       {children}
     </>
