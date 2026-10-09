@@ -1,35 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-function ClippySVG() {
-  return (
-    <svg width="72" height="112" viewBox="0 0 72 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* outer paperclip loop */}
-      <path
-        d="M58 98 Q68 98 68 82 L68 24 Q68 7 50 7 Q32 7 32 24 L32 76 Q32 87 41 87 Q50 87 50 76 L50 27"
-        stroke="#d4a017"
-        strokeWidth="9"
-        strokeLinecap="round"
-        fill="none"
-      />
-      {/* eye whites */}
-      <ellipse cx="40" cy="48" rx="7" ry="8" fill="white" />
-      <ellipse cx="57" cy="48" rx="7" ry="8" fill="white" />
-      {/* pupils */}
-      <circle cx="41" cy="49" r="3.5" fill="#1a1a1a" />
-      <circle cx="58" cy="49" r="3.5" fill="#1a1a1a" />
-      {/* eye shine */}
-      <circle cx="42.5" cy="47" r="1.3" fill="white" />
-      <circle cx="59.5" cy="47" r="1.3" fill="white" />
-      {/* eyebrows */}
-      <path d="M34 40 Q40 36 46 40" stroke="#d4a017" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-      <path d="M51 40 Q57 36 63 40" stroke="#d4a017" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-      {/* smile */}
-      <path d="M35 61 Q48 71 62 61" stroke="#d4a017" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-    </svg>
-  );
-}
+import Image from "next/image";
 
 export function RightClickGuard() {
   const [visible, setVisible] = useState(false);
@@ -79,7 +51,7 @@ export function RightClickGuard() {
 
         {/* Clippy */}
         <div className="clippy-bounce">
-          <ClippySVG />
+          <Image src="/clippy.gif" alt="Clippy" width={100} height={120} unoptimized />
         </div>
       </div>
     </div>
