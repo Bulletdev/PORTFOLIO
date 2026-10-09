@@ -184,13 +184,20 @@ function processCommand(
       };
     }
 
-    default:
+    default: {
+      const known = ["nmap", "curl", "decode", "submit", "clear", "whoami", "help"];
+      const suggestion = known.find(
+        (k) => k !== cmd && [...cmd].filter((c, i) => c !== k[i]).length <= 2 && Math.abs(cmd.length - k.length) <= 2
+      );
       return {
-        output: [{ text: `  command not found: ${cmd}. type 'help'.`, color: "red" }],
+        output: [
+          { text: `  command not found: ${cmd}.${suggestion ? ` did you mean '${suggestion}'?` : " type 'help'."}`, color: "red" },
+        ],
         newStage,
         solved: false,
         clear: false,
       };
+    }
   }
 }
 
