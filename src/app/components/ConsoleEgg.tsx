@@ -42,19 +42,6 @@ export default function ConsoleEgg() {
       configurable: true,
     });
 
-    const blockContext = (e: MouseEvent) => e.preventDefault();
-    const blockKeys = (e: KeyboardEvent) => {
-      if (e.key === "F12") { e.preventDefault(); return; }
-      if (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) { e.preventDefault(); return; }
-      if (e.ctrlKey && e.key === "u") e.preventDefault();
-    };
-
-    document.addEventListener("contextmenu", blockContext);
-    document.addEventListener("keydown", blockKeys);
-    return () => {
-      document.removeEventListener("contextmenu", blockContext);
-      document.removeEventListener("keydown", blockKeys);
-    };
   }, []);
 
   return null;

@@ -1,5 +1,6 @@
 import Navigation from "../components/Navigation";
 import ConsoleEgg from "../components/ConsoleEgg";
+import { RightClickGuard } from "../components/RightClickGuard";
 
 export default function MainLayout({
   children,
@@ -9,6 +10,7 @@ export default function MainLayout({
   return (
     <>
       <ConsoleEgg />
+      <RightClickGuard />
       <Navigation />
       {children}
     </>
