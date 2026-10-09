@@ -102,18 +102,6 @@ export const pt: Translations = {
         ],
       },
       {
-        companyName: "Effront",
-        positionTitle: "Fundador & Engenheiro Principal",
-        date: "2026 - Presente",
-        tech: ["Platform Pentesting", "Game Logic Audit", "Exploit Simulation", "Infra Resilience", "Incident Response", "Zero Trust"],
-        trivia: "Segurança ofensiva para plataformas de jogos é um nicho que praticamente não existe — construir o site exigiu entender o produto fundo o suficiente para explicar pentest de plataforma para um diretor de torneio.",
-        description: [
-          "Projetei e construí o site institucional da Effront, empresa de segurança ofensiva especializada em plataformas de jogos, torneios e estúdios.",
-          "Arquitetura bilíngue (EN/PT) com next-intl, puzzle de capacidades animado, seções com reveal e media kit integrado ao Vercel Blob.",
-          "Serviços da Effront: pentest de plataforma, auditoria de lógica de jogo, simulação de exploits, testes de resiliência de infra, treinamento e resposta a incidentes.",
-        ],
-      },
-      {
         companyName: "Pirelli Pneus",
         positionTitle: "Desenvolvedor Júnior",
         date: "Outubro de 2017 - Outubro de 2018",

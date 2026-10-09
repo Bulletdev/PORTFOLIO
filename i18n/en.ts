@@ -102,18 +102,6 @@ export const en: Translations = {
         ],
       },
       {
-        companyName: "Effront",
-        positionTitle: "Founder & Lead Engineer",
-        date: "2026 - Present",
-        tech: ["Platform Pentesting", "Game Logic Audit", "Exploit Simulation", "Infra Resilience", "Incident Response", "Zero Trust"],
-        trivia: "Offensive security for gaming platforms is a niche that barely exists — building the site meant understanding the product deeply enough to explain platform pentesting to a tournament director.",
-        description: [
-          "Designed and built the institutional site for Effront, an offensive security company focused on gaming platforms, tournaments, and studios.",
-          "Architected a bilingual (EN/PT) site with next-intl, a capabilities puzzle UI, animated reveal sections, and a Vercel Blob-powered media kit.",
-          "Services offered: platform pentesting, game-logic auditing, exploit simulation, infra resilience testing, training, and incident response.",
-        ],
-      },
-      {
         companyName: "Pirelli Pneus",
         positionTitle: "Junior Developer",
         date: "October 2017 - October 2018",
