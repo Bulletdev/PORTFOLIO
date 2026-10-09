@@ -48,6 +48,10 @@ const SCRIPT: Line[] = [
   { kind: "out", text: '   now i am learning to walk through walls."' },
   { kind: "blank" },
   { kind: "cmd", text: "ls -la / && cd /portfolio" },
+  { kind: "out", text: "  drwxr-xr-x   michael  portfolio/" },
+  { kind: "out", text: "  drwxr-xr-x   michael  skills/" },
+  { kind: "out", text: "  -rw-r--r--   root     robots.txt" },
+  { kind: "blank" },
 ];
 
 const CMD_DELAY = 60;
