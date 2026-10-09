@@ -242,11 +242,6 @@ export const en: Translations = {
           "Go API gateway centralizing Riot Games API access with rate limiting, dual-layer caching (LRU + Redis), circuit breakers, regional routing, and JWT auth between services.",
       },
       {
-        title: "Effront",
-        description:
-          "Institutional site for Effront, an offensive security company for gaming platforms. Bilingual (EN/PT) with next-intl, capabilities puzzle UI, Vercel Blob media kit, services catalog, and careers board.",
-      },
-      {
         title: "Clube do Java E-commerce",
         description:
           "E-commerce platform with Vue.js and Java, payment API integration, shipping, chatbot, and SEO optimization.",
