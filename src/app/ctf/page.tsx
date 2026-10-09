@@ -74,34 +74,8 @@ function processCommand(
       return { output: BANNER, newStage, solved: false, clear: true };
 
     case "nmap": {
-      if (stage < 1) newStage = 1;
-      const target = rest.join(" ") || "10.10.31.337";
-      return {
-        output: [
-          { text: "" },
-          { text: `  Starting Nmap 7.94 ( https://nmap.org )`, color: "dim" },
-          { text: `  Nmap scan report for ${target}`, color: "white" },
-          { text: "  Host is up (0.098s latency).", color: "white" },
-          { text: "" },
-          { text: "  PORT      STATE  SERVICE      VERSION", color: "cyan" },
-          { text: "  22/tcp    open   ssh          OpenSSH 7.6p1 Ubuntu", color: "white" },
-          { text: "  80/tcp    open   http         Apache httpd 2.4.29", color: "white" },
-          { text: "  445/tcp   open   microsoft-ds Samba smbd 3.X - 4.X", color: "white" },
-          { text: "  8080/tcp  open   http-proxy   ?", color: "white" },
-          { text: "" },
-          { text: "  Host script results:", color: "yellow" },
-          { text: "  | smb-vuln-ms17-010:", color: "yellow" },
-          { text: "  |   VULNERABLE: MS17-010 — EternalBlue SMB RCE", color: "red" },
-          { text: "  |   State: VULNERABLE", color: "red" },
-          { text: "  |_  Risk factor: HIGH", color: "red" },
-          { text: "" },
-          { text: "  → port 8080 looks interesting.", color: "dim" },
-          { text: "    try: curl -I http://10.10.31.337:8080/secret", color: "dim" },
-        ],
-        newStage,
-        solved: false,
-        clear: false,
-      };
+      // streaming handled separately in executeCommand
+      return { output: [], newStage, solved: false, clear: false };
     }
 
     case "curl": {
@@ -219,48 +193,95 @@ function processCommand(
   }
 }
 
+function getNmapLines(target: string): { line: OutputLine; delay: number }[] {
+  return [
+    { line: { text: "" }, delay: 0 },
+    { line: { text: `  Starting Nmap 7.94 ( https://nmap.org )`, color: "dim" }, delay: 180 },
+    { line: { text: `  Nmap scan report for ${target}`, color: "white" }, delay: 320 },
+    { line: { text: "  Host is up (0.098s latency).", color: "white" }, delay: 220 },
+    { line: { text: "" }, delay: 120 },
+    { line: { text: "  PORT      STATE  SERVICE      VERSION", color: "cyan" }, delay: 260 },
+    { line: { text: "  22/tcp    open   ssh          OpenSSH 7.6p1 Ubuntu", color: "white" }, delay: 180 },
+    { line: { text: "  80/tcp    open   http         Apache httpd 2.4.29", color: "white" }, delay: 200 },
+    { line: { text: "  445/tcp   open   microsoft-ds Samba smbd 3.X - 4.X", color: "white" }, delay: 220 },
+    { line: { text: "  8080/tcp  open   http-proxy   ?", color: "white" }, delay: 160 },
+    { line: { text: "" }, delay: 100 },
+    { line: { text: "  Host script results:", color: "yellow" }, delay: 600 },
+    { line: { text: "  | smb-vuln-ms17-010:", color: "yellow" }, delay: 280 },
+    { line: { text: "  |   VULNERABLE: MS17-010 — EternalBlue SMB RCE", color: "red" }, delay: 200 },
+    { line: { text: "  |   State: VULNERABLE", color: "red" }, delay: 160 },
+    { line: { text: "  |_  Risk factor: HIGH", color: "red" }, delay: 140 },
+    { line: { text: "" }, delay: 200 },
+    { line: { text: "  → port 8080 looks interesting.", color: "dim" }, delay: 400 },
+    { line: { text: "    try: curl -I http://10.10.31.337:8080/secret", color: "dim" }, delay: 120 },
+  ];
+}
+
 export default function CTF() {
   const [output, setOutput] = useState<OutputLine[]>(BANNER);
   const [input, setInput] = useState("");
   const [stage, setStage] = useState(0);
   const [solved, setSolved] = useState(false);
+  const [streaming, setStreaming] = useState(false);
   const [history, setHistory] = useState<string[]>([]);
   const [histIdx, setHistIdx] = useState(-1);
   const [encodedKey] = useState(() => btoa(INNER_KEY));
   const inputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef(stage);
+  stageRef.current = stage;
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [output]);
 
-  function handleSubmit() {
-    const cmd = input.trim();
-    if (!cmd) return;
+  async function executeCommand(cmd: string) {
+    const trimmed = cmd.trim();
+    if (!trimmed || streaming) return;
 
-    const { output: newOut, newStage, solved: isSolved, clear } = processCommand(cmd, stage, encodedKey);
+    const cmdEcho: OutputLine = { text: `  ❯ ${trimmed}`, color: "white" };
+    const topCmd = trimmed.split(/\s+/)[0].toLowerCase();
+    const target = trimmed.split(/\s+/).slice(1).join(" ") || "10.10.31.337";
+
+    if (topCmd === "nmap") {
+      setStreaming(true);
+      setOutput((prev) => [...prev, { text: "" }, cmdEcho]);
+      setHistory((prev) => [trimmed, ...prev]);
+      setHistIdx(-1);
+      setInput("");
+
+      for (const { line, delay } of getNmapLines(target)) {
+        await new Promise<void>((r) => setTimeout(r, delay));
+        setOutput((prev) => [...prev, line]);
+      }
+
+      setStage((prev) => Math.max(prev, 1));
+      setStreaming(false);
+      return;
+    }
+
+    const { output: newOut, newStage, solved: isSolved, clear } = processCommand(
+      trimmed,
+      stageRef.current,
+      encodedKey,
+    );
 
     if (clear) {
       setOutput(newOut);
     } else {
-      setOutput((prev) => [
-        ...prev,
-        { text: "" },
-        { text: `  ❯ ${cmd}`, color: "white" },
-        ...newOut,
-      ]);
+      setOutput((prev) => [...prev, { text: "" }, cmdEcho, ...newOut]);
     }
 
     setStage(newStage);
     if (isSolved) setSolved(true);
-    setHistory((prev) => [cmd, ...prev]);
+    setHistory((prev) => [trimmed, ...prev]);
     setHistIdx(-1);
     setInput("");
   }
 
   function handleKey(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
-      handleSubmit();
+      executeCommand(input);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       const next = Math.min(histIdx + 1, history.length - 1);
@@ -304,18 +325,22 @@ export default function CTF() {
           {!solved && (
             <div className="flex items-center gap-2 mt-1">
               <span className="text-[#1db954] select-none shrink-0 pl-5">❯</span>
-              <input
-                ref={inputRef}
-                className="flex-1 bg-transparent text-white outline-none text-[12.5px] font-mono"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKey}
-                autoFocus
-                spellCheck={false}
-                autoComplete="off"
-                autoCorrect="off"
-                autoCapitalize="off"
-              />
+              {streaming ? (
+                <span className="text-white/30 text-[12.5px] animate-pulse">scanning...</span>
+              ) : (
+                <input
+                  ref={inputRef}
+                  className="flex-1 bg-transparent text-white outline-none text-[12.5px] font-mono"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKey}
+                  autoFocus
+                  spellCheck={false}
+                  autoComplete="off"
+                  autoCorrect="off"
+                  autoCapitalize="off"
+                />
+              )}
             </div>
           )}
 
