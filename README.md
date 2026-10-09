@@ -1,79 +1,92 @@
-# Michael Bullet's Portfolio 
+```
+  ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
+  ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+  ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+  ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+  ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
+                                                        michaelbullet.dev
+```
 
+<div align="center">
 
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/deployed-Vercel-000000?logo=vercel&logoColor=white)](https://www.michaelbullet.dev)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Bulletdev/PORTFOLIO?color=1db954&labelColor=000000)](https://github.com/Bulletdev/PORTFOLIO/commits/main)
 
-[![Website Status](https://img.shields.io/badge/website-up-yellow)](https://www.michaelbullet.com/)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/bulletdev/PORTFOLIO/commits/main)
-[![LinkedIn](https://img.shields.io/badge/connect-linkedin-1abc9c.svg)](https://www.linkedin.com/in/michael-bullet/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-[![CodeQL Advanced](https://github.com/Bulletdev/PORTFOLIO/actions/workflows/codeql.yml/badge.svg)](https://github.com/Bulletdev/PORTFOLIO/actions/workflows/codeql.yml)
+</div>
 
-A modern, responsive portfolio website built with cutting-edge technologies, featuring a Spotify-inspired design.
+---
 
-## ✨ Preview
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  michaelbullet.dev — personal portfolio                                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  Next.js 15 App Router · TypeScript · Tailwind CSS · Framer Motion           ║
+║  Bilingual (EN/PT) · Spotify-inspired dark UI · hidden CTF · easter eggs     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
 
-<img src="public/preview.png" width="900" alt="Portfolio Preview">
+---
 
-## 🛠️ Built With
+<details>
+<summary><kbd>▶ Features (click to expand)</kbd></summary>
 
-- **Framework:** [Next.js 14](https://nextjs.org/) with App Router
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **State Management:** [Redux](https://redux.js.org/)
-- **UI Components:** [Aceternity UI](https://ui.aceternity.com/)
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  [■] Bilingual              — EN/PT with context-based language switching    │
+│  [■] Spotify dark UI        — #1db954 green palette, monospace aesthetic     │
+│  [■] Animated sections      — Framer Motion scroll reveals                  │
+│  [■] /whoami                — terminal-style biography with typewriter anim  │
+│  [■] /ctf                   — interactive browser-based CTF (4 stages)       │
+│  [■] ConsoleEgg             — devtools easter egg with window.whoami getter  │
+│  [■] RightClickGuard        — Clippy on main pages, Windows error on /ctf   │
+│  [■] robots.txt hint        — classic recon path to /ctf                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-## 🔥 Key Features
+</details>
 
-- 📱 Fully Responsive Design
-- 🎨 Spotify-Inspired Interface
-- 🔄 Smooth Animations 
+---
 
-## 🚀 Quick Start
+## Stack
 
-1. **Clone the repository**
+| Layer | Tech |
+|---|---|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 3 + custom CSS |
+| Animations | Framer Motion 11 |
+| i18n | Custom context (EN/PT) |
+| Deployment | Vercel |
 
-   ```bash
-   git clone https://github.com/bulletdev/portfolio.git
-   ```
+---
 
-2. **Install dependencies**
+## Quick Start
 
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/Bulletdev/PORTFOLIO.git
+cd PORTFOLIO
+npm install
+npm run dev        # http://localhost:7777
+```
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser
+---
 
-## 📦 Deployment
+## Easter Eggs
 
-The site is optimized for deployment on [Vercel](https://vercel.com/). Simply:
+```
+robots.txt  →  /ctf is mentioned
+console     →  open devtools, type: whoami
+/whoami     →  terminal biography + hint to robots.txt
+/ctf        →  4-stage browser CTF (nmap → curl → decode → submit)
+right-click →  Clippy says hi
+```
 
-1. Push your code to GitHub
-2. Import your repository to Vercel
-3. Deploy with a single click
+---
 
-## 🤝 Contributing
+## License
 
-Pull requests are welcome! For major changes:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## ⭐ Show Your Support
-
-Give a ⭐️ if you like this project!
-
----  
-
-Made with ❤️ by [Michael Bullet](https://www.linkedin.com/in/Michael-bullet/)
+MIT — [Michael Bullet](https://github.com/Bulletdev)
