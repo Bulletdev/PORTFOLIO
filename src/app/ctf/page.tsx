@@ -40,7 +40,39 @@ function processCommand(
   stage: number,
   encodedKey: string,
 ): { output: OutputLine[]; newStage: number; solved: boolean; clear: boolean } {
-  const parts = input.trim().split(/\s+/);
+  const trimmed = input.trim();
+  // auto-detect flag submission
+  if (/^BULLET\{.+\}$/i.test(trimmed)) {
+    const submitted = trimmed.trim();
+    if (submitted === FLAG) {
+      return {
+        output: [
+          { text: "" },
+          { text: "  ██████████████████████████████████████████", color: "green" },
+          { text: "  ██                                      ██", color: "green" },
+          { text: "  ██   ACCESS GRANTED                     ██", color: "green" },
+          { text: `  ██   ${FLAG}   ██`, color: "green" },
+          { text: "  ██                                      ██", color: "green" },
+          { text: "  ██████████████████████████████████████████", color: "green" },
+          { text: "" },
+          { text: "  you think like an attacker.", color: "dim" },
+          { text: "  that's the point.", color: "dim" },
+          { text: "" },
+        ],
+        newStage: 4,
+        solved: true,
+        clear: false,
+      };
+    }
+    return {
+      output: [{ text: "  wrong flag. keep digging.", color: "red" }],
+      newStage: stage,
+      solved: false,
+      clear: false,
+    };
+  }
+
+  const parts = trimmed.split(/\s+/);
   const cmd = parts[0].toLowerCase();
   const rest = parts.slice(1);
   let newStage = stage;
