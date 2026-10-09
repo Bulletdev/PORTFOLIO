@@ -29,10 +29,18 @@ export default function ConsoleEgg() {
 
 %c→ hint:%c
   there's a hidden page for people who look this deep
-  try → /whoami
+  try → whoami
 `,
       g, d, g, d, g, d, y, w
     );
+
+    Object.defineProperty(window, "whoami", {
+      get() {
+        window.location.href = "/whoami";
+        return "→ /whoami";
+      },
+      configurable: true,
+    });
   }, []);
 
   return null;
