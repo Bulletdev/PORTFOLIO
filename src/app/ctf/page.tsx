@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { RightClickGuard } from "../components/RightClickGuard";
 
 const INNER_KEY = "3t3rn4l_blu3_n3v3r_p4tch3d";
 const FLAG = `BULLET{${INNER_KEY}}`;
@@ -297,6 +298,7 @@ export default function CTF() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-start px-4 py-10 font-mono">
+      <RightClickGuard />
       <div className="w-full max-w-3xl rounded-xl overflow-hidden border border-white/10 shadow-2xl">
         {/* title bar */}
         <div className="flex items-center gap-2 px-4 py-3 bg-[#1c1c1c] border-b border-white/10">
