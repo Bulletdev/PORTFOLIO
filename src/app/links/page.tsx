@@ -26,6 +26,7 @@ import { IoCloudDownloadOutline, IoLocationOutline } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { PiTranslateBold } from "react-icons/pi";
 import { useLanguage } from "../contexts/languageContext";
+import { TryHackMeBadge } from "../components/TryHackMeBadge";
 
 type LinkItem = {
   href: string;
@@ -99,7 +100,7 @@ export default function LinksPage() {
       icon: <FaInstagram />,
     },
     {
-      href: "https://x.com/JavaAdvocate",
+      href: "https://x.com/CraqueBullet",
       label: t.links.x,
       icon: <FaXTwitter />,
     },
@@ -125,11 +126,6 @@ export default function LinksPage() {
       href: "https://www.hackerrank.com/craquebullet",
       label: "HackerRank",
       icon: <SiHackerrank />,
-    },
-    {
-      href: "https://tryhackme.com/p/BulletOnRails",
-      label: "TryHackMe",
-      icon: <TryHackMeIcon />,
     },
     {
       href: "https://hbh.sh/user/MitnickBR",
@@ -238,6 +234,8 @@ export default function LinksPage() {
               </Link>
             ))}
           </div>
+
+          <TryHackMeBadge />
 
           <div className="flex items-center gap-3">
             <button
