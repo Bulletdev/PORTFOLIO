@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { RightClickGuard } from "../components/RightClickGuard";
+import { TryHackMeBadge } from "../components/TryHackMeBadge";
 
 type Line =
   | { kind: "cmd"; text: string }
@@ -170,6 +171,13 @@ export default function WhoAmI() {
           <div ref={bottomRef} />
         </div>
       </div>
+
+      {/* TryHackMe badge */}
+      {done && (
+        <div className="mt-6 w-full max-w-3xl flex justify-center animate-fadeIn">
+          <TryHackMeBadge />
+        </div>
+      )}
 
       {/* back link — appears after animation */}
       {done && (
